@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Index"
 author: "Rachel Hall"
 date: "2024-01-24"
 output: html_document
@@ -9,6 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+### Lab 2
 [Link to New Page](newpage.html)
 
