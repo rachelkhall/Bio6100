@@ -11,9 +11,9 @@
 
 <meta name="author" content="Rachel Hall" />
 
-<meta name="date" content="2024-01-24" />
+<meta name="date" content="2024-01-31" />
 
-<title>Index</title>
+<title>Homework3</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,16 +350,101 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Index</h1>
+<h1 class="title toc-ignore">Homework3</h1>
 <h4 class="author">Rachel Hall</h4>
-<h4 class="date">2024-01-24</h4>
+<h4 class="date">2024-01-31</h4>
 
 </div>
 
 
-<div id="lab-2" class="section level3">
-<h3>Lab 2</h3>
-<p><a href="HW3.html">Link to New Page</a></p>
+<div id="question-1" class="section level3">
+<h3>Question 1</h3>
+<p>First String,Second,1.22,3.4</p>
+<p>Second,More Text,1.555555,2.2220</p>
+<p>Third,x,3,124</p>
+<p><strong>Answer:</strong> <code>Find \s+\s</code></p>
+<p><code>Replace \,</code></p>
+<p><strong>Explanation:</strong> Looking for multiple spaces and then
+replacing with just a comma.</p>
+</div>
+<div id="question-2" class="section level3">
+<h3>Question 2</h3>
+<p>Bryan Ballif (University of Vermont)</p>
+<p>Aaron Ellison (Harvard Forest)</p>
+<p>Sydne Record (Bryn Mawr)</p>
+<p><strong>Answer:</strong>
+<code>Find (\w+),\s(\w+),\s(\w+.*)</code></p>
+<p><code>Replace \2 \1 \(\3\)</code></p>
+<p><strong>Explanation:</strong> Creating three captures then switching
+the first and second leaving a space in between. For the third, adding
+parenthesis around.</p>
+</div>
+<div id="question-3" class="section level3">
+<h3>Question 3</h3>
+<p>0001 Georgia Horseshoe.mp3</p>
+<p>0002 Billy In The Lowground.mp3</p>
+<p>0003 Winder Slide.mp3</p>
+<p>0004 Walking Cane.mp3</p>
+<p><strong>Answer:</strong> <code>Find (mp3)(\s)</code></p>
+<p><code>Replace \1\n</code></p>
+<p><strong>Explanation:</strong> Finding mp3 and replacing the space
+after with a line break.</p>
+</div>
+<div id="question-4" class="section level3">
+<h3>Question 4</h3>
+<p>Georgia Horseshoe_0001.mp3</p>
+<p>Billy In The Lowground_0002.mp3</p>
+<p>Winder Slide_0003.mp3</p>
+<p>Walking Cane_0004.mp3</p>
+<p><strong>Answer:</strong> <code>Find (\d{4}) (\w+.*)(.mp3)</code></p>
+<p><code>Replace \2_\1\3</code></p>
+<p><strong>Explanation:</strong> Capturing each portion of the line into
+three different captures for the four digit number, song title, and mp3.
+Then rearrange the captures accordingly with an underscore between the
+title and number.</p>
+</div>
+<div id="question-5" class="section level3">
+<h3>Question 5</h3>
+<p>C_pennsylvanicus, 44</p>
+<p>C_herculeanus, 3</p>
+<p>M_punctiventris, 4</p>
+<p>L_neoniger, 55</p>
+<p><strong>Answer:</strong>
+<code>Find (\w)\w+,(\w+),(\w.*),(\w+)</code></p>
+<p><code>Replace \1_\2, \4</code></p>
+<p><strong>Explanation:</strong> Capturing each portion of the line into
+four different captures. Then abbreviating for the first word and adding
+an underscore. Lastly, replacing the third capture with nothing to get
+rid of that portion of the lines.</p>
+</div>
+<div id="question-6" class="section level3">
+<h3>Question 6</h3>
+<p>C_penn, 44</p>
+<p>C_herc, 3</p>
+<p>M_punc, 4</p>
+<p>L_neon, 55</p>
+<p><strong>Answer:</strong>
+<code>Find (\w)\w+,(\w{4})\w+,(\w.*),(\w+)</code></p>
+<p>`<code>Replace \1_\2, \4</code></p>
+<p><strong>Explanation:</strong> Similar to question 5, capturing each
+portion of the line but this time I used the quantifier to capture just
+the first four characters of the second capture.</p>
+</div>
+<div id="question-7" class="section level3">
+<h3>Question 7</h3>
+<p>Campenn, 44, 10.2</p>
+<p>Camherc, 3, 10.5</p>
+<p>Myrpunc, 4, 12.2</p>
+<p>Lasneon, 55, 3.3</p>
+<p><strong>Answer:</strong>
+<code>Find (\w{3})\w+,(\w{4})\w+,(\w.*),(\w+)</code></p>
+<p><code>Replace \1\2, \4, \3</code></p>
+<p><strong>Explanation:</strong> Similar to the last two questions,
+capturing each portion of the line but this time I used the quantifier
+to capture the first three letters of the first capture and the first
+four characters of the second capture then combined the two captures
+into one word. Lastly, switching the third and fourth capture to switch
+their order.</p>
 </div>
 
 

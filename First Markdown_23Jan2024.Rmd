@@ -1,0 +1,103 @@
+---
+title: "Working with Markdown"
+author: "Rachel Hall"
+date: "2024-01-23"
+output: 
+  html_document: 
+    theme: cerulean
+    highlight: pygments
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+For markdown, use asterisks to *indicate italic text*.
+
+
+
+Double line return for a new chunk of text like this. 
+
+Name  
+Department of Biology   
+University of Vermont
+
+# Hash marks for headers
+
+## more hashes for progressively
+
+### smaller
+
+#### headers
+
+**bold face this way**
+
+>Offset quote which embeds for extended material that you would like to see.
+
+Back to plain text
+
+* first list item
+* second item
+   - spacing for indents
+   
+   - ^superscript^ but also a ~subscript~ like this
+   
+   
+ [set up a link with text](website address)
+ 
+ also footnotes^[at bottom of page]
+ 
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+```
+Fencing sets boundaries and everything inside the fencing *is shown as literal text* without rendering
+```
+$$a + b =c$$
+We can also use Latex in line with a single dollar sign $a+b=c$ like this.
+
+### Subscripts in LaTex
+
+$$H_0 = Z_{a + b}$$
+$$S=cA^z_1 + z_{2 + x}$$
+
+$$\alpha = \frac{\beta}{\delta + \gamma_x}$$
+
+$$z = \sum_{i=1}^X{K}$$
+
+### “Escaping” the  special character in LaTeX
+Dollar sign distinguishes LaTex math expression from regular text. Backslash is used to generate a special symbol or command. 
+
+Use backslash $$\backslash $$
+$$\backslash \alpha \le b \backslash$$
+
+### Rendering in plain text
+$$P(Occurrence Of Species A) = Z$$
+
+$$P(\mbox{Occurrence Of Species A}) = Z$$
+
+### Embedding 
+
+Easy to embed LaTex in line $\pi + 3$ like so. 
+We can also use markdown fencing in line with a single backtick `pi + 3` like this. 
+We can even execute r code inside of markdown text `r pi + 3`
+
+### Running R Code 
+R chunk is created using three backticks and { r }
+
+Eval is whether or not to evaluate the code and include its results. 
+
+Echo determines if the code if displayed with the results of the code (false = doesn't show).
+
+
+```{r eval=TRUE, echo=TRUE}
+# Use comments extensively in ALL of your coding!
+Pred <- seq(1,10)     # make a vector of integers from 1 to 10
+Res <- runif(10)      # generate 10 draws from a random uniform (0,1) distribution
+
+# print the random numbers
+print(Res)
+
+# plot the graph
+plot(x=Pred,y=Res,type="b")

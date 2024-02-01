@@ -10,5 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### Lab 2
-[Link to New Page](newpage.html)
+[Link to New Page](HW3.html)
+
 
