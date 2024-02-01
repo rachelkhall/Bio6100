@@ -9,7 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Lab 2
-[Link to New Page](HW3.html)
+### Homework 2
+[Link to New Page](newpage.html)
 
+### Homework 3
+[Link to HW3](HW3.html)
 
