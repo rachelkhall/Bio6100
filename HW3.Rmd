@@ -18,9 +18,9 @@ Third,x,3,124
 
 **Answer:** 
 ```Find \s+\s ```
-
+<!-- # \s{2,}  -->
 ```Replace \,```
-
+<!-- #  ,  -->
 **Explanation:** Looking for multiple spaces and then replacing with just a comma.
 
 

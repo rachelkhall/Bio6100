@@ -86,3 +86,83 @@ str(long_vec)
 
 sample(x=long_vec) # with no other params, this reorders the vector
 sample(x=long_vec, size=3) # specify a number (sampling without replacement)
+sample(x=long_vec, size=11)
+sample(x=long_vec,size=16,replace=TRUE) # can generate duplicates, so that you don't get the error as seen above 
+my_weights <- c(rep(20,5),rep(100,5)) # create a set of non-zero positive weights (integer or real)
+print(my_weights)
+my_weights <- c(rep(c(20,1000),each=5)) # more concise way of writing
+my_weight <-c(100,100,100,1000,100,100,100,100,100,100)
+print(my_weights)
+sample(x=long_vec,replace=TRUE,prob=my_weights) # sampling with replacement and weights
+sample(x=long_vec,replace=FALSE,prob=my_weights) # sampling without replacement and weights
+sample(x=long_vec,replace=TRUE,prob=long_vec) # what does this do?
+
+z <- c(3.1, 9.2, 1.3, 0.4, 7.5)
+
+# positive index values
+z[c(2,3)]
+
+# negative index values to exclude elements
+z[-c(2,3)]
+
+# create a vector of logical elements to select conditions
+
+z[z<3] # this set of code is equivalent to the set below:
+
+tester <- z<3
+print(tester)
+z[tester]
+
+which(z<3)
+
+
+z[which(z<3)]
+
+z[-(length(z):(length(z)-2))]
+
+# also can subset using named vector elements
+names(z) <- letters[1:5]
+names(z) <- LETTERS[1:5]
+#z[c("b","c")]
+
+z
+
+# <   less than
+# >   greater than
+# <=  less than or equal to
+# >=  greater than or equal to
+# ==  equal to
+
+# ! not
+# & and (vector)
+## | or (vector)
+# xor(x,y)
+
+x <-1:5
+y <-c(1:3,7,7)
+
+x == 2
+x != 2
+x == 1 & y == 7
+x 
+y
+y_special <- c(y,7)
+
+x == 1 | y_special == 7
+x == 1 & y == 7
+x
+y
+x == 3 | y == 3 
+
+set.seed(90)
+z <- runif(10) # simple integer sequence
+print(z)
+
+z < 0.5 # create logical vector
+z[z < 0.5] # use as index call
+which(z < 0.5) # use to get indices for logical
+z[which(z < 0.5)] # does same as above
+
+zD <- c(z,NA,NA) # contaminate it
+zD[zD < 0.5] # NA values carried along!
+zD[which(zD < 0.5)] # NA values dropped

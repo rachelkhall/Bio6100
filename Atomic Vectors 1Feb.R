@@ -83,7 +83,7 @@ print(z)
 typeof(z)
 
 length(z) # gives number of elements 
-length(y_not) # throws error if variable does not exist
+#length(y_not) # throws error if variable does not exist
 
 # Type and length will always be present for any vector we have. There is a third possibility that is Names
 
