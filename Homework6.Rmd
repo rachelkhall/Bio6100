@@ -2,7 +2,9 @@
 ### 21 Feb 2024
 ### Rachel Hall 
 
-```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
 library(ggplot2) #for graphics 
 library(MASS)
 library(dplyr) 
