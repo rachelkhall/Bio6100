@@ -359,161 +359,136 @@ display: none;
 
 <div id="question-1" class="section level2">
 <h2>Question 1</h2>
-<pre><code>x &lt;-1.1
+<pre class="r"><code>x &lt;-1.1
 a &lt;-2.2
-b &lt;-3.3
-</code></pre>
+b &lt;-3.3</code></pre>
 <div id="a" class="section level4">
 <h4>1a</h4>
-<pre><code>z &lt;- x^(a^b)
-print(z) 
-
-[1] 3.61714</code></pre>
+<pre class="r"><code>z &lt;- x^(a^b)
+print(z) </code></pre>
+<pre><code>## [1] 3.61714</code></pre>
 </div>
 <div id="b" class="section level4">
 <h4>1b</h4>
-<pre><code>z &lt;- (x^a)^b
-print(z)
-
-[1] 1.997611</code></pre>
+<pre class="r"><code>z &lt;- (x^a)^b
+print(z)</code></pre>
+<pre><code>## [1] 1.997611</code></pre>
 </div>
 <div id="c" class="section level4">
 <h4>1c</h4>
-<pre><code>z &lt;- (3*(x^3))+(2*(x^2))+1 
-print(z)
-
-[1] 7.413</code></pre>
+<pre class="r"><code>z &lt;- (3*(x^3))+(2*(x^2))+1 
+print(z)</code></pre>
+<pre><code>## [1] 7.413</code></pre>
 </div>
 </div>
 <div id="question-2" class="section level2">
 <h2>Question 2</h2>
 <div id="a-1" class="section level4">
 <h4>2a</h4>
-<pre><code>a2 &lt;- c(1:8,seq(7,1,-1))
-print(a2)
-
-[1] 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1</code></pre>
+<pre class="r"><code>a2 &lt;- c(1:8,seq(7,1,-1))
+print(a2)</code></pre>
+<pre><code>##  [1] 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1</code></pre>
 </div>
 <div id="b-1" class="section level4">
 <h4>2b</h4>
-<pre><code>b2 &lt;- seq(1,5)
-print(b2)
-
-[1] 1 2 3 4 5
-
-rep(x=b2,times=b2)
-
-[1] 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5</code></pre>
+<pre class="r"><code>b2 &lt;- seq(1,5)
+print(b2)</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>rep(x=b2,times=b2)</code></pre>
+<pre><code>##  [1] 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5</code></pre>
 </div>
 <div id="c-1" class="section level4">
 <h4>2c</h4>
-<pre><code>b2 &lt;- seq(1,5)
+<pre class="r"><code>b2 &lt;- seq(1,5)
 c2 &lt;- seq(5,1)
-rep(x=c2,times=b2)
-
-[1] 5 4 4 3 3 3 2 2 2 2 1 1 1 1 1</code></pre>
+rep(x=c2,times=b2)</code></pre>
+<pre><code>##  [1] 5 4 4 3 3 3 2 2 2 2 1 1 1 1 1</code></pre>
 </div>
 </div>
 <div id="question-3" class="section level2">
 <h2>Question 3</h2>
-<pre><code>set.seed(10)
+<pre class="r"><code>set.seed(10)
 x2 &lt;- runif(2)
-print(x2)
-
-[1] 0.5074782 0.3067685</code></pre>
+print(x2)</code></pre>
+<pre><code>## [1] 0.5074782 0.3067685</code></pre>
 <div id="finding-the-hypotenuse" class="section level4">
 <h4>Finding the hypotenuse</h4>
-<pre><code>r &lt;- sqrt(x2[1]^2+x2[2]^2)
-print(r)
-
-[1] 0.5929933</code></pre>
+<pre class="r"><code>r &lt;- sqrt(x2[1]^2+x2[2]^2)
+print(r)</code></pre>
+<pre><code>## [1] 0.5929933</code></pre>
 </div>
 <div id="finding-the-angle-of-the-vector-in-radians" class="section level4">
 <h4>Finding the angle of the vector (in radians)</h4>
-<pre><code>theta &lt;- asin(x2[2]/r)
-print(theta)
-
-[1] 0.5437188
-
-polarcoords &lt;-c(r, theta)
-print(polarcoords)
-
-[1] 0.5929933 0.5437188</code></pre>
+<pre class="r"><code>theta &lt;- asin(x2[2]/r)
+print(theta)</code></pre>
+<pre><code>## [1] 0.5437188</code></pre>
+<pre class="r"><code>polarcoords &lt;-c(r, theta)
+print(polarcoords)</code></pre>
+<pre><code>## [1] 0.5929933 0.5437188</code></pre>
 </div>
 </div>
 <div id="question-4" class="section level2">
 <h2>Question 4</h2>
-<pre><code>queue &lt;- c(&quot;sheep&quot;, &quot;fox&quot;, &quot;owl&quot;, &quot;ant&quot;)
-print(queue)
-
-[1] &quot;sheep&quot; &quot;fox&quot;   &quot;owl&quot;   &quot;ant&quot; </code></pre>
+<pre class="r"><code>queue &lt;- c(&quot;sheep&quot;, &quot;fox&quot;, &quot;owl&quot;, &quot;ant&quot;)
+print(queue)</code></pre>
+<pre><code>## [1] &quot;sheep&quot; &quot;fox&quot;   &quot;owl&quot;   &quot;ant&quot;</code></pre>
 <div id="a-serpent-gets-in-line" class="section level4">
 <h4>4a: Serpent gets in line</h4>
-<pre><code>queue[5] &lt;- (&quot;serpent&quot;)
-print(queue)
-
-[1] &quot;sheep&quot;   &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
+<pre class="r"><code>queue[5] &lt;- (&quot;serpent&quot;)
+print(queue)</code></pre>
+<pre><code>## [1] &quot;sheep&quot;   &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
 </div>
 <div id="b-the-sheep-enters-the-ark-gets-out-of-line" class="section level4">
 <h4>4b: The sheep enters the ark (gets out of line)</h4>
-<pre><code>queue &lt;- queue[-1]
-print(queue)
-
-[1] &quot;sheep&quot;   &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
+<pre class="r"><code>queue &lt;- queue[-1]
+print(queue)</code></pre>
+<pre><code>## [1] &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
 </div>
 <div id="c-the-donkey-arrives-and-talks-his-way-to-the-front-of-the-line." class="section level4">
 <h4>4c: The donkey arrives and talks his way to the front of the
 line.</h4>
-<pre><code>queue &lt;- c(&quot;donkey&quot;, queue)
-print(queue)
-
-[1] &quot;donkey&quot;  &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
+<pre class="r"><code>queue &lt;- c(&quot;donkey&quot;, queue)
+print(queue)</code></pre>
+<pre><code>## [1] &quot;donkey&quot;  &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
 </div>
 <div id="d-the-serpent-gets-impatient-and-leaves." class="section level4">
 <h4>4d: The serpent gets impatient and leaves.</h4>
-<pre><code>queue &lt;- queue[-5]
-print(queue)
-
-[1] &quot;donkey&quot; &quot;fox&quot;    &quot;owl&quot;    &quot;ant&quot; </code></pre>
+<pre class="r"><code>queue &lt;- queue[-5]
+print(queue)</code></pre>
+<pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;owl&quot;    &quot;ant&quot;</code></pre>
 </div>
 <div id="e-the-owl-gets-bored-and-leaves." class="section level4">
 <h4>4e: The owl gets bored and leaves.</h4>
-<pre><code>queue &lt;- queue[-3]
-print(queue)
-
-[1] &quot;donkey&quot; &quot;fox&quot;    &quot;ant&quot;   </code></pre>
+<pre class="r"><code>queue &lt;- queue[-3]
+print(queue)</code></pre>
+<pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;ant&quot;</code></pre>
 </div>
 <div id="f-the-aphid-arrives-and-the-ant-invites-him-to-cut-in-line." class="section level4">
 <h4>4f: The aphid arrives and the ant invites him to cut in line.</h4>
-<pre><code>queue &lt;- c(queue[1], queue[2], &quot;aphid&quot;, queue[3])
-print(queue)
-
-[1] &quot;donkey&quot; &quot;fox&quot;    &quot;aphid&quot;  &quot;ant&quot;</code></pre>
+<pre class="r"><code>queue &lt;- c(queue[1], queue[2], &quot;aphid&quot;, queue[3])
+print(queue)</code></pre>
+<pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;aphid&quot;  &quot;ant&quot;</code></pre>
 </div>
 <div id="g-finally-determine-the-position-of-the-aphid-in-the-line." class="section level4">
 <h4>4g: Finally, determine the position of the aphid in the line.</h4>
-<pre><code>which(queue == &quot;aphid&quot;)
-
-[1] 3</code></pre>
+<pre class="r"><code>which(queue == &quot;aphid&quot;)</code></pre>
+<pre><code>## [1] 3</code></pre>
 </div>
 </div>
 <div id="question-5" class="section level2">
 <h2>Question 5</h2>
-<pre><code>vec &lt;- seq(1:100)
-print(vec)
-
-[1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
- [20]  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38
- [39]  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57
- [58]  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76
- [77]  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95
- [96]  96  97  98  99 100
-
-vec &lt;- vec[vec %% 2 !=0 &amp; vec%%3 !=0 &amp; vec%%7 !=0]
-print(vec)
-
-[1]  1  5 11 13 17 19 23 25 29 31 37 41 43 47 53 55 59 61 65 67 71 73 79 83 85 89
-[27] 95 97</code></pre>
+<pre class="r"><code>vec &lt;- seq(1:100)
+print(vec)</code></pre>
+<pre><code>##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
+##  [19]  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36
+##  [37]  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54
+##  [55]  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72
+##  [73]  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90
+##  [91]  91  92  93  94  95  96  97  98  99 100</code></pre>
+<pre class="r"><code>vec &lt;- vec[vec %% 2 !=0 &amp; vec%%3 !=0 &amp; vec%%7 !=0]
+print(vec)</code></pre>
+<pre><code>##  [1]  1  5 11 13 17 19 23 25 29 31 37 41 43 47 53 55 59 61 65 67 71 73 79 83 85
+## [26] 89 95 97</code></pre>
 </div>
 
 

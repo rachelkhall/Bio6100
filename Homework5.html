@@ -358,103 +358,155 @@ display: none;
 
 <div id="question-1" class="section level3">
 <h3>Question 1</h3>
-<pre><code>n_dims &lt;- sample(3:10,1)
+<pre class="r"><code>n_dims &lt;- sample(3:10,1)
 print(n_dims)</code></pre>
+<pre><code>## [1] 8</code></pre>
 <div id="creating-a-vector-of-consecutive-integers-from-1-to-n_dims2" class="section level4">
 <h4>Creating a vector of consecutive integers from 1 to n_dims^2</h4>
-<pre><code>n_dimssquared &lt;- n_dims^2
+<pre class="r"><code>n_dimssquared &lt;- n_dims^2
 vector &lt;- 1: n_dimssquared</code></pre>
 </div>
 <div id="using-sample-function-to-randomly-reshuffle-these" class="section level4">
 <h4>Using sample function to randomly reshuffle these</h4>
-<pre><code>shuffled_vec &lt;- sample(vector)</code></pre>
+<pre class="r"><code>shuffled_vec &lt;- sample(vector)</code></pre>
 </div>
 <div id="creating-a-square-matrix" class="section level4">
 <h4>Creating a square matrix</h4>
-<pre><code>sq_m &lt;- matrix(data = shuffled_vec, nrow = n_dims, ncol = n_dims)
+<pre class="r"><code>sq_m &lt;- matrix(data = shuffled_vec, nrow = n_dims, ncol = n_dims)
 print(sq_m)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]   30   45   15    7   23   20    3   57
+## [2,]   24   11   43   51   27   16    1   37
+## [3,]    6   36   49   54   47   63   19   59
+## [4,]   48   39   62   42   35   52   25   29
+## [5,]   61   44   22   64   14    4   60   21
+## [6,]   17   58   28   31   38    5   32   40
+## [7,]    9   18   50   12   46   13   55    2
+## [8,]   33   53   34   56   26   10    8   41</code></pre>
 </div>
 <div id="transpose-matrix-rows-and-columns-flip" class="section level4">
 <h4>Transpose matrix, rows and columns flip</h4>
-<pre><code>t &lt;- t(sq_m)
+<pre class="r"><code>t &lt;- t(sq_m)
 print(t)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]   30   24    6   48   61   17    9   33
+## [2,]   45   11   36   39   44   58   18   53
+## [3,]   15   43   49   62   22   28   50   34
+## [4,]    7   51   54   42   64   31   12   56
+## [5,]   23   27   47   35   14   38   46   26
+## [6,]   20   16   63   52    4    5   13   10
+## [7,]    3    1   19   25   60   32   55    8
+## [8,]   57   37   59   29   21   40    2   41</code></pre>
 </div>
 <div id="calculate-the-sum-and-mean-of-elements-in-the-first-row-and-then-the-last-row" class="section level4">
 <h4>Calculate the sum and mean of elements in the first row and then the
 last row</h4>
-<pre><code>sumfirst &lt;- sum(t[1,])
-print(sumfirst)
-
-meanfirst &lt;- mean(t[1,])
-print(meanfirst)
-
-sumlast &lt;- sum(t[n_dims,])
-print(sumlast)
-
-meanlast &lt;- mean(t[n_dims,])
+<pre class="r"><code>sumfirst &lt;- sum(t[1,])
+print(sumfirst)</code></pre>
+<pre><code>## [1] 228</code></pre>
+<pre class="r"><code>meanfirst &lt;- mean(t[1,])
+print(meanfirst)</code></pre>
+<pre><code>## [1] 28.5</code></pre>
+<pre class="r"><code>sumlast &lt;- sum(t[n_dims,])
+print(sumlast)</code></pre>
+<pre><code>## [1] 286</code></pre>
+<pre class="r"><code>meanlast &lt;- mean(t[n_dims,])
 print(meanlast)</code></pre>
+<pre><code>## [1] 35.75</code></pre>
 </div>
 <div id="using-eigen-function-and-use-it-on-matrix" class="section level4">
 <h4>Using eigen() function and use it on matrix</h4>
-<pre><code>e &lt;- eigen(t)
-print(e)</code></pre>
+<pre class="r"><code>e &lt;- eigen(t)
+print(e$values)</code></pre>
+<pre><code>## [1] 266.220563+ 0.00000i  64.889910+ 0.00000i -24.188641+40.73527i
+## [4] -24.188641-40.73527i -25.277958+14.82181i -25.277958-14.82181i
+## [7]  15.867738+ 0.00000i  -1.045013+ 0.00000i</code></pre>
 </div>
 <div id="figuring-out-the-type-for-these" class="section level4">
 <h4>Figuring out the type for these</h4>
-<pre><code>typeof(e$values)
-typeof(e$vectors)</code></pre>
+<pre class="r"><code>typeof(e$values)</code></pre>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
+<pre class="r"><code>typeof(e$vectors)</code></pre>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
 </div>
 </div>
 <div id="question-2" class="section level3">
 <h3>Question 2</h3>
 <div id="create-a-list-with-the-following-named-elements" class="section level4">
 <h4>Create a list with the following named elements:</h4>
-<div id="my_matrix-which-is-a-4-x-4-matrix-filled-with-random-uniform-values" class="section level5">
-<h5>my_matrix, which is a 4 x 4 matrix filled with random uniform
-values</h5>
-<pre><code>my_matrix &lt;- matrix(data=runif(16), nrow=4, ncol=4)
+<ul>
+<li><h5 id="my_matrix-which-is-a-4-x-4-matrix-filled-with-random-uniform-values">my_matrix,
+which is a 4 x 4 matrix filled with random uniform values</h5></li>
+</ul>
+<pre class="r"><code>my_matrix &lt;- matrix(data=runif(16), nrow=4, ncol=4)
 print(my_matrix)</code></pre>
-</div>
-<div id="my_logical-which-is-a-100-element-vector-of-true-or-false-values.-do-this-efficiently-by-setting-up-a-vector-of-random-values-and-then-applying-an-inequality-to-it." class="section level5">
-<h5>my_logical which is a 100-element vector of TRUE or FALSE values. Do
-this efficiently by setting up a vector of random values and then
-applying an inequality to it.</h5>
-<pre><code>l &lt;- runif(100)
+<pre><code>##            [,1]      [,2]        [,3]       [,4]
+## [1,] 0.98273456 0.3803076 0.149560840 0.66586904
+## [2,] 0.26311327 0.6706945 0.007200715 0.27493943
+## [3,] 0.81772510 0.5987119 0.405376969 0.05337617
+## [4,] 0.07414752 0.3631254 0.523540590 0.49186339</code></pre>
+<ul>
+<li><h5 id="my_logical-which-is-a-100-element-vector-of-true-or-false-values.-do-this-efficiently-by-setting-up-a-vector-of-random-values-and-then-applying-an-inequality-to-it.">my_logical
+which is a 100-element vector of TRUE or FALSE values. Do this
+efficiently by setting up a vector of random values and then applying an
+inequality to it.</h5></li>
+</ul>
+<pre class="r"><code>l &lt;- runif(100)
 my_logical &lt;- l&gt;0.5
 print(my_logical)</code></pre>
-</div>
-<div id="my_letters-which-is-a-26-element-vector-of-all-the-lower-case-letters-in-random-order." class="section level5">
-<h5>my_letters, which is a 26-element vector of all the lower-case
-letters in random order.</h5>
-<pre><code>my_letters &lt;- c(sample(letters, size = 26, replace=FALSE))
+<pre><code>##   [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE
+##  [13] FALSE FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE  TRUE
+##  [25] FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE  TRUE
+##  [37]  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
+##  [49] FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE
+##  [61]  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+##  [73] FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE  TRUE FALSE  TRUE FALSE
+##  [85]  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE
+##  [97]  TRUE  TRUE FALSE  TRUE</code></pre>
+<ul>
+<li><h5 id="my_letters-which-is-a-26-element-vector-of-all-the-lower-case-letters-in-random-order.">my_letters,
+which is a 26-element vector of all the lower-case letters in random
+order.</h5></li>
+</ul>
+<pre class="r"><code>my_letters &lt;- c(sample(letters, size = 26, replace=FALSE))
 print(my_letters)</code></pre>
-</div>
+<pre><code>##  [1] &quot;v&quot; &quot;f&quot; &quot;p&quot; &quot;a&quot; &quot;z&quot; &quot;c&quot; &quot;e&quot; &quot;q&quot; &quot;b&quot; &quot;u&quot; &quot;l&quot; &quot;s&quot; &quot;y&quot; &quot;t&quot; &quot;n&quot; &quot;r&quot; &quot;m&quot; &quot;i&quot; &quot;x&quot;
+## [20] &quot;g&quot; &quot;j&quot; &quot;d&quot; &quot;h&quot; &quot;w&quot; &quot;o&quot; &quot;k&quot;</code></pre>
 </div>
 <div id="create-a-new-list-which-has-the-element22-from-the-matrix-the-second-element-of-the-logical-vector-and-the-second-element-of-the-letters-vector." class="section level4">
 <h4>Create a new list, which has the element[2,2] from the matrix, the
 second element of the logical vector, and the second element of the
 letters vector.</h4>
-<pre><code>new_list &lt;- list(my_matrix[2,2],my_logical[2],my_letters[2])
+<pre class="r"><code>new_list &lt;- list(my_matrix[2,2],my_logical[2],my_letters[2])
 print(new_list)</code></pre>
+<pre><code>## [[1]]
+## [1] 0.6706945
+## 
+## [[2]]
+## [1] TRUE
+## 
+## [[3]]
+## [1] &quot;f&quot;</code></pre>
 </div>
 <div id="use-the-typeof-function-to-confirm-the-underlying-data-types-of-each-component-in-this-list" class="section level4">
 <h4>Use the typeof() function to confirm the underlying data types of
 each component in this list</h4>
-<pre><code>typeof(new_list[[1]]) # double
-typeof(new_list[[2]]) # logical
-typeof(new_list[[3]]) # character</code></pre>
+<pre class="r"><code>typeof(new_list[[1]]) </code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(new_list[[2]]) </code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>typeof(new_list[[3]]) </code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
 <div id="combine-the-underlying-elements-from-the-new-list-into-a-single-atomic-vector-with-the-c-function." class="section level4">
 <h4>Combine the underlying elements from the new list into a single
 atomic vector with the c() function.</h4>
-<pre><code>combo_vector &lt;- c(new_list[[1]], new_list[[2]], new_list[[3]])</code></pre>
+<pre class="r"><code>combo_vector &lt;- c(new_list[[1]], new_list[[2]], new_list[[3]])</code></pre>
 </div>
 <div id="what-is-the-data-type-of-this-vector" class="section level4">
 <h4>What is the data type of this vector?</h4>
-<div id="character" class="section level5">
-<h5>Character</h5>
-<pre><code>typeof(combo_vector)</code></pre>
-</div>
+<pre class="r"><code>typeof(combo_vector)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
 </div>
 <div id="question-3" class="section level3">
@@ -462,40 +514,128 @@ atomic vector with the c() function.</h4>
 <div id="create-a-data-frame-with-the-two-variables-columns-and-26-cases-rows-below" class="section level4">
 <h4>Create a data frame with the two variables (= columns) and 26 cases
 (= rows) below:</h4>
-<div id="call-the-first-variable-my_unis-and-fill-it-with-26-random-uniform-values-from-0-to-10" class="section level5">
-<h5>Call the first variable my_unis and fill it with 26 random uniform
-values from 0 to 10</h5>
-<pre><code>my_unis &lt;- runif(26, min = 0, max = 10)</code></pre>
-</div>
-<div id="call-the-second-variable-my_letters-and-fill-it-with-26-capital-letters-in-random-order." class="section level5">
-<h5>Call the second variable my_letters and fill it with 26 capital
-letters in random order.</h5>
-<pre><code>my_letters &lt;- c(sample(LETTERS,size=26, replace = FALSE))
+<ul>
+<li><h5 id="call-the-first-variable-my_unis-and-fill-it-with-26-random-uniform-values-from-0-to-10">Call
+the first variable my_unis and fill it with 26 random uniform values
+from 0 to 10</h5></li>
+</ul>
+<pre class="r"><code>my_unis &lt;- runif(26, min = 0, max = 10)</code></pre>
+<ul>
+<li><h5 id="call-the-second-variable-my_letters-and-fill-it-with-26-capital-letters-in-random-order.">Call
+the second variable my_letters and fill it with 26 capital letters in
+random order.</h5></li>
+</ul>
+<pre class="r"><code>my_letters &lt;- c(sample(LETTERS,size=26, replace = FALSE))
 
 dFrame &lt;- data.frame(my_unis,my_letters, stringsAsFactors=FALSE)
 print(dFrame)</code></pre>
-</div>
-<div id="for-the-first-variable-use-a-single-line-of-code-in-r-to-select-4-random-rows-and-replace-the-numerical-values-in-those-rows-with-na." class="section level5">
-<h5>For the first variable, use a single line of code in R to select 4
-random rows and replace the numerical values in those rows with NA.</h5>
-<pre><code>dFrame[sample(length(my_unis), size = 4, replace = FALSE),1] &lt;- NA
+<pre><code>##      my_unis my_letters
+## 1  9.9873963          I
+## 2  2.6309054          B
+## 3  5.6270512          U
+## 4  8.9792747          D
+## 5  8.8157367          W
+## 6  0.3855924          V
+## 7  9.8789010          R
+## 8  3.4854050          S
+## 9  2.3941196          A
+## 10 1.7001224          M
+## 11 3.5028561          E
+## 12 3.6957535          T
+## 13 7.5190625          Y
+## 14 5.3914016          K
+## 15 2.6873319          O
+## 16 7.0478402          Z
+## 17 5.5672150          H
+## 18 3.0874866          N
+## 19 8.0138885          L
+## 20 8.5109669          J
+## 21 2.8581023          C
+## 22 6.6759029          P
+## 23 7.8675518          F
+## 24 9.9493965          G
+## 25 0.5745401          Q
+## 26 9.4329170          X</code></pre>
+<ul>
+<li><h5 id="for-the-first-variable-use-a-single-line-of-code-in-r-to-select-4-random-rows-and-replace-the-numerical-values-in-those-rows-with-na.">For
+the first variable, use a single line of code in R to select 4 random
+rows and replace the numerical values in those rows with NA.</h5></li>
+</ul>
+<pre class="r"><code>dFrame[sample(length(my_unis), size = 4, replace = FALSE),1] &lt;- NA
 print(dFrame)</code></pre>
-</div>
-<div id="for-the-first-variable-write-a-single-line-of-r-code-to-identify-which-rows-have-the-missing-values." class="section level5">
-<h5>For the first variable, write a single line of R code to identify
-which rows have the missing values.</h5>
-<pre><code>which(!complete.cases(dFrame$my_unis))</code></pre>
-</div>
-<div id="re-order-the-entire-data-frame-to-arrange-the-second-variable-in-alphabetical-order" class="section level5">
-<h5>Re-order the entire data frame to arrange the second variable in
-alphabetical order</h5>
-<pre><code>dFrame &lt;-dFrame[order(dFrame$my_letters),]
+<pre><code>##      my_unis my_letters
+## 1  9.9873963          I
+## 2  2.6309054          B
+## 3  5.6270512          U
+## 4  8.9792747          D
+## 5  8.8157367          W
+## 6  0.3855924          V
+## 7         NA          R
+## 8  3.4854050          S
+## 9  2.3941196          A
+## 10 1.7001224          M
+## 11 3.5028561          E
+## 12 3.6957535          T
+## 13        NA          Y
+## 14 5.3914016          K
+## 15 2.6873319          O
+## 16 7.0478402          Z
+## 17 5.5672150          H
+## 18        NA          N
+## 19 8.0138885          L
+## 20 8.5109669          J
+## 21 2.8581023          C
+## 22 6.6759029          P
+## 23        NA          F
+## 24 9.9493965          G
+## 25 0.5745401          Q
+## 26 9.4329170          X</code></pre>
+<ul>
+<li><h5 id="for-the-first-variable-write-a-single-line-of-r-code-to-identify-which-rows-have-the-missing-values.">For
+the first variable, write a single line of R code to identify which rows
+have the missing values.</h5></li>
+</ul>
+<pre class="r"><code>which(!complete.cases(dFrame$my_unis))</code></pre>
+<pre><code>## [1]  7 13 18 23</code></pre>
+<ul>
+<li><h5 id="re-order-the-entire-data-frame-to-arrange-the-second-variable-in-alphabetical-order">Re-order
+the entire data frame to arrange the second variable in alphabetical
+order</h5></li>
+</ul>
+<pre class="r"><code>dFrame &lt;-dFrame[order(dFrame$my_letters),]
 print(dFrame)</code></pre>
-</div>
+<pre><code>##      my_unis my_letters
+## 9  2.3941196          A
+## 2  2.6309054          B
+## 21 2.8581023          C
+## 4  8.9792747          D
+## 11 3.5028561          E
+## 23        NA          F
+## 24 9.9493965          G
+## 17 5.5672150          H
+## 1  9.9873963          I
+## 20 8.5109669          J
+## 14 5.3914016          K
+## 19 8.0138885          L
+## 10 1.7001224          M
+## 18        NA          N
+## 15 2.6873319          O
+## 22 6.6759029          P
+## 25 0.5745401          Q
+## 7         NA          R
+## 8  3.4854050          S
+## 12 3.6957535          T
+## 3  5.6270512          U
+## 6  0.3855924          V
+## 5  8.8157367          W
+## 26 9.4329170          X
+## 13        NA          Y
+## 16 7.0478402          Z</code></pre>
 </div>
 <div id="calculate-the-column-mean-for-the-first-variable." class="section level4">
 <h4>Calculate the column mean for the first variable.</h4>
-<pre><code>mean(dFrame$my_unis, na.rm = TRUE)</code></pre>
+<pre class="r"><code>mean(dFrame$my_unis, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 5.359714</code></pre>
 </div>
 </div>
 

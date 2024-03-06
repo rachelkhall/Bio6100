@@ -22,7 +22,7 @@ library(dplyr)
 <!-- summary(z$myVar) -->
 
 #### Reading Data:
-```
+```{r echo=TRUE,results='hide'}
 z<-read.csv("Li_Soil_Dataset.csv", sep=",", comment.char = '#')
 str(z)
 z<-na.omit(z)
@@ -31,79 +31,80 @@ summary(z)
 ```
 
 #### Plotting Histogram:
-```
-p1 <- ggplot(data=z, aes(x=myVar, y=..density..)) +
-  geom_histogram(color="grey",fill="cadetblue3",size=0.2) 
-print(p1)
+```{r message=FALSE}
+p1 <- ggplot(data=z, aes(x=myVar, y=after_stat(density))) +
+  geom_histogram(color="grey",fill="cadetblue3",linewidth=0.2) 
 ```
 
 ##### Adding Empirical Density Curve:
-```
-p1 <-  p1 +  geom_density(linetype="dotted",size=0.75)
+```{r echo=TRUE, message=FALSE}
+p1 <-  p1 +  geom_density(linetype="dotted",linewidth=0.75)
 print(p1)
 ```
 
 ##### Getting maximum likelihood parameters for normal:
-```
+```{r echo=TRUE, results='hide'}
 normPars <- fitdistr(z$myVar,"normal")
 print(normPars)
 str(normPars)
+```
+```{r echo=TRUE}
 normPars$estimate["mean"] # note structure of getting a named attribute
 ```
 
 #### Plot Normal Probability:
-```
+``````{r echo=TRUE, message=FALSE}
 meanML <- normPars$estimate["mean"]
 sdML <- normPars$estimate["sd"]
 
 xval <- seq(0,max(z$myVar),len=length(z$myVar))
 
-stat <- stat_function(aes(x = xval, y = ..y..), fun = dnorm, colour="mediumorchid", n = length(z$myVar), args = list(mean = meanML, sd = sdML))
+stat <- stat_function(aes(x = xval, y = after_stat(y)), fun = dnorm, colour="mediumorchid", n = length(z$myVar), args = list(mean = meanML, sd = sdML))
 p1 + stat
 ```
 
 #### Plot exponential probability density:
-```
+```{r echo=TRUE, message=FALSE}
 expoPars <- fitdistr(z$myVar,"exponential")
 rateML <- expoPars$estimate["rate"]
 
-stat2 <- stat_function(aes(x = xval, y = ..y..), fun = dexp, colour="green", n = length(z$myVar), args = list(rate=rateML))
+stat2 <- stat_function(aes(x = xval, y = after_stat(y)), fun = dexp, colour="green", n = length(z$myVar), args = list(rate=rateML))
 p1 + stat + stat2
 ```
 
 #### Plot uniform probability density:
-```
-stat3 <- stat_function(aes(x = xval, y = ..y..), fun = dunif, colour="darkgreen", n = length(z$myVar), args = list(min=min(z$myVar), max=max(z$myVar)))
+```{r echo=TRUE, message=FALSE}
+stat3 <- stat_function(aes(x = xval, y = after_stat(y)), fun = dunif, colour="darkgreen", n = length(z$myVar), args = list(min=min(z$myVar), max=max(z$myVar)))
 p1 + stat + stat2 + stat3
 ```
 
 #### Plot gamma probability:
-```
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 gammaPars <- fitdistr(z$myVar,"gamma")
 shapeML <- gammaPars$estimate["shape"]
 rateML <- gammaPars$estimate["rate"]
 
-stat4 <- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour="navy", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
+stat4 <- stat_function(aes(x = xval, y = after_stat(y)), fun = dgamma, colour="navy", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
 p1 + stat + stat2 + stat3 + stat4
 ```
 
 #### Plot beta probability:
-```
-pSpecial <- ggplot(data=z, aes(x=myVar/(max(myVar + 0.1)), y=..density..)) +
-  geom_histogram(color="grey60",fill="plum1",size=0.2) + 
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+pSpecial <- ggplot(data=z, aes(x=myVar/(max(myVar + 0.1)), y=after_stat(density))) +
+  geom_histogram(color="grey60",fill="plum1",linewidth=0.2) + 
   xlim(c(0,1)) +
-  geom_density(size=0.75,linetype="dotted")
+  geom_density(linewidth=0.75,linetype="dotted")
 
 betaPars <- fitdistr(x=z$myVar/max(z$myVar + 0.1),start=list(shape1=1,shape2=2),"beta")
 shape1ML <- betaPars$estimate["shape1"]
 shape2ML <- betaPars$estimate["shape2"]
 
-statSpecial <- stat_function(aes(x = xval, y = ..y..), fun = dbeta, colour="orchid4", n = length(z$myVar), args = list(shape1=shape1ML,shape2=shape2ML))
+statSpecial <- stat_function(aes(x = xval, y = after_stat(y)), fun = dbeta, colour="orchid4", n = length(z$myVar), args = list(shape1=shape1ML,shape2=shape2ML))
 pSpecial + statSpecial
 ```
 
 #### Comparing Likelihood (higher number = best fit):
-```
+```{r echo=TRUE}
 normPars$loglik 
 gammaPars$loglik 
 expoPars$loglik
@@ -112,7 +113,7 @@ expoPars$loglik
 ##### Gamma distribution would be the best fit as it has the highest number for likelihood.
 
 #### Simulating Data:
-```
+```{r echo=TRUE,results='hide',message=FALSE, warning=FALSE}
 z <- rgamma(n= 60, shape=shapeML, rate=rateML) 
 z <- data.frame(1:60,z)
 
@@ -133,8 +134,9 @@ str(normPars)
 gammaPars <- fitdistr(z$myVar,"gamma")
 shapeML <- gammaPars$estimate["shape"]
 rateML <- gammaPars$estimate["rate"]
-
-stat5 <- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour="darkslategrey", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
+```
+```{r echo=TRUE, message=FALSE}
+stat5 <- stat_function(aes(x = xval, y = after_stat(y)), fun = dgamma, colour="darkslategrey", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
 p2 + stat5
 
 p1 + stat4
