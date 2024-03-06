@@ -9,10 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Rachel Hall" />
 
 
-<title>Index</title>
+<title>Homework6.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -349,37 +348,147 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Index</h1>
-<h4 class="author">Rachel Hall</h4>
-<h4 class="date">Spring 2024</h4>
 
 </div>
 
 
-<p>HTML Webpage for Computational Biology, Spring 2024.</p>
-<div id="homework-2" class="section level3">
-<h3>Homework 2</h3>
-<p><a href="newpage.html">Link to New Page</a></p>
+<div id="homework-6" class="section level1">
+<h1>Homework 6</h1>
+<div id="feb-2024" class="section level3">
+<h3>21 Feb 2024</h3>
 </div>
-<div id="homework-3" class="section level3">
-<h3>Homework 3</h3>
-<p><a href="HW3.html">Link to HW3</a></p>
+<div id="rachel-hall" class="section level3">
+<h3>Rachel Hall</h3>
+<pre><code>library(ggplot2) #for graphics 
+library(MASS)
+library(dplyr) </code></pre>
+<!-- #### Used Li_Soil_Dataset from examples -->
+<!-- z <- rnorm(n=3000,mean=0.2) -->
+<!-- z <- data.frame(1:3000,z) -->
+<!-- names(z) <- list("ID","myVar") -->
+<!-- z <- z[z$myVar>0,] -->
+<!-- str(z) -->
+<!-- summary(z$myVar) -->
+<div id="reading-data" class="section level4">
+<h4>Reading Data:</h4>
+<pre><code>z&lt;-read.csv(&quot;Li_Soil_Dataset.csv&quot;, sep=&quot;,&quot;, comment.char = &#39;#&#39;)
+str(z)
+z&lt;-na.omit(z)
+z$myVar&lt;-z$Plant.biomass..g.
+summary(z)</code></pre>
 </div>
-<div id="homework-4" class="section level3">
-<h3>Homework 4</h3>
-<p><a href="HW4.html">Link to HW4</a></p>
+<div id="plotting-histogram" class="section level4">
+<h4>Plotting Histogram:</h4>
+<pre><code>p1 &lt;- ggplot(data=z, aes(x=myVar, y=..density..)) +
+  geom_histogram(color=&quot;grey&quot;,fill=&quot;cadetblue3&quot;,size=0.2) 
+print(p1)</code></pre>
+<div id="adding-empirical-density-curve" class="section level5">
+<h5>Adding Empirical Density Curve:</h5>
+<pre><code>p1 &lt;-  p1 +  geom_density(linetype=&quot;dotted&quot;,size=0.75)
+print(p1)</code></pre>
 </div>
-<div id="homework-5" class="section level3">
-<h3>Homework 5</h3>
-<p><a href="Homework5.html">Link to HW5</a></p>
+<div id="getting-maximum-likelihood-parameters-for-normal" class="section level5">
+<h5>Getting maximum likelihood parameters for normal:</h5>
+<pre><code>normPars &lt;- fitdistr(z$myVar,&quot;normal&quot;)
+print(normPars)
+str(normPars)
+normPars$estimate[&quot;mean&quot;] # note structure of getting a named attribute</code></pre>
 </div>
-<div id="homework-6" class="section level3">
-<h3>Homework 6</h3>
-<p><a href="Homework6.html">Link to HW6</a></p>
 </div>
-<div id="homework-7" class="section level3">
-<h3>Homework 7</h3>
-<p><a href="Homework7.html">Link to HW7</a></p>
+<div id="plot-normal-probability" class="section level4">
+<h4>Plot Normal Probability:</h4>
+<pre><code>meanML &lt;- normPars$estimate[&quot;mean&quot;]
+sdML &lt;- normPars$estimate[&quot;sd&quot;]
+
+xval &lt;- seq(0,max(z$myVar),len=length(z$myVar))
+
+stat &lt;- stat_function(aes(x = xval, y = ..y..), fun = dnorm, colour=&quot;mediumorchid&quot;, n = length(z$myVar), args = list(mean = meanML, sd = sdML))
+p1 + stat</code></pre>
+</div>
+<div id="plot-exponential-probability-density" class="section level4">
+<h4>Plot exponential probability density:</h4>
+<pre><code>expoPars &lt;- fitdistr(z$myVar,&quot;exponential&quot;)
+rateML &lt;- expoPars$estimate[&quot;rate&quot;]
+
+stat2 &lt;- stat_function(aes(x = xval, y = ..y..), fun = dexp, colour=&quot;green&quot;, n = length(z$myVar), args = list(rate=rateML))
+p1 + stat + stat2</code></pre>
+</div>
+<div id="plot-uniform-probability-density" class="section level4">
+<h4>Plot uniform probability density:</h4>
+<pre><code>stat3 &lt;- stat_function(aes(x = xval, y = ..y..), fun = dunif, colour=&quot;darkgreen&quot;, n = length(z$myVar), args = list(min=min(z$myVar), max=max(z$myVar)))
+p1 + stat + stat2 + stat3</code></pre>
+</div>
+<div id="plot-gamma-probability" class="section level4">
+<h4>Plot gamma probability:</h4>
+<pre><code>gammaPars &lt;- fitdistr(z$myVar,&quot;gamma&quot;)
+shapeML &lt;- gammaPars$estimate[&quot;shape&quot;]
+rateML &lt;- gammaPars$estimate[&quot;rate&quot;]
+
+stat4 &lt;- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour=&quot;navy&quot;, n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
+p1 + stat + stat2 + stat3 + stat4</code></pre>
+</div>
+<div id="plot-beta-probability" class="section level4">
+<h4>Plot beta probability:</h4>
+<pre><code>pSpecial &lt;- ggplot(data=z, aes(x=myVar/(max(myVar + 0.1)), y=..density..)) +
+  geom_histogram(color=&quot;grey60&quot;,fill=&quot;plum1&quot;,size=0.2) + 
+  xlim(c(0,1)) +
+  geom_density(size=0.75,linetype=&quot;dotted&quot;)
+
+betaPars &lt;- fitdistr(x=z$myVar/max(z$myVar + 0.1),start=list(shape1=1,shape2=2),&quot;beta&quot;)
+shape1ML &lt;- betaPars$estimate[&quot;shape1&quot;]
+shape2ML &lt;- betaPars$estimate[&quot;shape2&quot;]
+
+statSpecial &lt;- stat_function(aes(x = xval, y = ..y..), fun = dbeta, colour=&quot;orchid4&quot;, n = length(z$myVar), args = list(shape1=shape1ML,shape2=shape2ML))
+pSpecial + statSpecial</code></pre>
+</div>
+<div id="comparing-likelihood-higher-number-best-fit" class="section level4">
+<h4>Comparing Likelihood (higher number = best fit):</h4>
+<pre><code>normPars$loglik 
+gammaPars$loglik 
+expoPars$loglik</code></pre>
+<div id="gamma-distribution-would-be-the-best-fit-as-it-has-the-highest-number-for-likelihood." class="section level5">
+<h5>Gamma distribution would be the best fit as it has the highest
+number for likelihood.</h5>
+</div>
+</div>
+<div id="simulating-data" class="section level4">
+<h4>Simulating Data:</h4>
+<pre><code>z &lt;- rgamma(n= 60, shape=shapeML, rate=rateML) 
+z &lt;- data.frame(1:60,z)
+
+names(z) &lt;- list(&quot;ID&quot;,&quot;myVar&quot;)
+z &lt;- z[z$myVar&gt;0,]
+str(z)
+z &lt;- na.omit(z)
+
+p2 &lt;- ggplot(data=z, aes(x=myVar, y=..density..)) +
+  geom_histogram(color=&quot;snow&quot;,fill=&quot;darkseagreen&quot;,size=0.2) 
+print(p2)
+
+normPars &lt;- fitdistr(z$myVar,&quot;normal&quot;)
+print(normPars)
+
+str(normPars)
+
+gammaPars &lt;- fitdistr(z$myVar,&quot;gamma&quot;)
+shapeML &lt;- gammaPars$estimate[&quot;shape&quot;]
+rateML &lt;- gammaPars$estimate[&quot;rate&quot;]
+
+stat5 &lt;- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour=&quot;darkslategrey&quot;, n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
+p2 + stat5
+
+p1 + stat4</code></pre>
+</div>
+<div id="comparing-the-simulated-plot-to-the-data-we-imported" class="section level4">
+<h4>Comparing the simulated plot to the data we imported:</h4>
+<div id="while-the-simulated-data-does-not-exactly-match-the-original-data-set-it-does-show-similar-trends-in-the-values.-both-the-simulated-data-and-the-original-data-are-right-skewed-as-well-which-illustrates-this-similarity." class="section level5">
+<h5>While the simulated data does not exactly match the original data
+set, it does show similar trends in the values. Both the simulated data
+and the original data are right skewed as well, which illustrates this
+similarity.</h5>
+</div>
+</div>
+</div>
 </div>
 
 

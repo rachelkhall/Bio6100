@@ -9,10 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Rachel Hall" />
 
 
-<title>Index</title>
+<title>Homework5.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -349,37 +348,161 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Index</h1>
-<h4 class="author">Rachel Hall</h4>
-<h4 class="date">Spring 2024</h4>
 
 </div>
 
 
-<p>HTML Webpage for Computational Biology, Spring 2024.</p>
-<div id="homework-2" class="section level3">
-<h3>Homework 2</h3>
-<p><a href="newpage.html">Link to New Page</a></p>
+<div id="homework-5" class="section level1">
+<h1>Homework 5</h1>
+<div id="rachel-hall" class="section level3">
+<h3>Rachel Hall</h3>
 </div>
-<div id="homework-3" class="section level3">
-<h3>Homework 3</h3>
-<p><a href="HW3.html">Link to HW3</a></p>
+<div id="feb-14-2024" class="section level3">
+<h3>Feb 14, 2024</h3>
+<pre><code>library(ggplot2)</code></pre>
 </div>
-<div id="homework-4" class="section level3">
-<h3>Homework 4</h3>
-<p><a href="HW4.html">Link to HW4</a></p>
+<div id="question-1" class="section level3">
+<h3>Question 1</h3>
+<pre><code>n_dims &lt;- sample(3:10,1)
+print(n_dims)</code></pre>
+<div id="creating-a-vector-of-consecutive-integers-from-1-to-n_dims2" class="section level4">
+<h4>Creating a vector of consecutive integers from 1 to n_dims^2</h4>
+<pre><code>n_dimssquared &lt;- n_dims^2
+vector &lt;- 1: n_dimssquared</code></pre>
 </div>
-<div id="homework-5" class="section level3">
-<h3>Homework 5</h3>
-<p><a href="Homework5.html">Link to HW5</a></p>
+<div id="using-sample-function-to-randomly-reshuffle-these" class="section level4">
+<h4>Using sample function to randomly reshuffle these</h4>
+<pre><code>shuffled_vec &lt;- sample(vector)</code></pre>
 </div>
-<div id="homework-6" class="section level3">
-<h3>Homework 6</h3>
-<p><a href="Homework6.html">Link to HW6</a></p>
+<div id="creating-a-square-matrix" class="section level4">
+<h4>Creating a square matrix</h4>
+<pre><code>sq_m &lt;- matrix(data = shuffled_vec, nrow = n_dims, ncol = n_dims)
+print(sq_m)</code></pre>
 </div>
-<div id="homework-7" class="section level3">
-<h3>Homework 7</h3>
-<p><a href="Homework7.html">Link to HW7</a></p>
+<div id="transpose-matrix-rows-and-columns-flip" class="section level4">
+<h4>Transpose matrix, rows and columns flip</h4>
+<pre><code>t &lt;- t(sq_m)
+print(t)</code></pre>
+</div>
+<div id="calculate-the-sum-and-mean-of-elements-in-the-first-row-and-then-the-last-row" class="section level4">
+<h4>Calculate the sum and mean of elements in the first row and then the
+last row</h4>
+<pre><code>sumfirst &lt;- sum(t[1,])
+print(sumfirst)
+
+meanfirst &lt;- mean(t[1,])
+print(meanfirst)
+
+sumlast &lt;- sum(t[n_dims,])
+print(sumlast)
+
+meanlast &lt;- mean(t[n_dims,])
+print(meanlast)</code></pre>
+</div>
+<div id="using-eigen-function-and-use-it-on-matrix" class="section level4">
+<h4>Using eigen() function and use it on matrix</h4>
+<pre><code>e &lt;- eigen(t)
+print(e)</code></pre>
+</div>
+<div id="figuring-out-the-type-for-these" class="section level4">
+<h4>Figuring out the type for these</h4>
+<pre><code>typeof(e$values)
+typeof(e$vectors)</code></pre>
+</div>
+</div>
+<div id="question-2" class="section level3">
+<h3>Question 2</h3>
+<div id="create-a-list-with-the-following-named-elements" class="section level4">
+<h4>Create a list with the following named elements:</h4>
+<div id="my_matrix-which-is-a-4-x-4-matrix-filled-with-random-uniform-values" class="section level5">
+<h5>my_matrix, which is a 4 x 4 matrix filled with random uniform
+values</h5>
+<pre><code>my_matrix &lt;- matrix(data=runif(16), nrow=4, ncol=4)
+print(my_matrix)</code></pre>
+</div>
+<div id="my_logical-which-is-a-100-element-vector-of-true-or-false-values.-do-this-efficiently-by-setting-up-a-vector-of-random-values-and-then-applying-an-inequality-to-it." class="section level5">
+<h5>my_logical which is a 100-element vector of TRUE or FALSE values. Do
+this efficiently by setting up a vector of random values and then
+applying an inequality to it.</h5>
+<pre><code>l &lt;- runif(100)
+my_logical &lt;- l&gt;0.5
+print(my_logical)</code></pre>
+</div>
+<div id="my_letters-which-is-a-26-element-vector-of-all-the-lower-case-letters-in-random-order." class="section level5">
+<h5>my_letters, which is a 26-element vector of all the lower-case
+letters in random order.</h5>
+<pre><code>my_letters &lt;- c(sample(letters, size = 26, replace=FALSE))
+print(my_letters)</code></pre>
+</div>
+</div>
+<div id="create-a-new-list-which-has-the-element22-from-the-matrix-the-second-element-of-the-logical-vector-and-the-second-element-of-the-letters-vector." class="section level4">
+<h4>Create a new list, which has the element[2,2] from the matrix, the
+second element of the logical vector, and the second element of the
+letters vector.</h4>
+<pre><code>new_list &lt;- list(my_matrix[2,2],my_logical[2],my_letters[2])
+print(new_list)</code></pre>
+</div>
+<div id="use-the-typeof-function-to-confirm-the-underlying-data-types-of-each-component-in-this-list" class="section level4">
+<h4>Use the typeof() function to confirm the underlying data types of
+each component in this list</h4>
+<pre><code>typeof(new_list[[1]]) # double
+typeof(new_list[[2]]) # logical
+typeof(new_list[[3]]) # character</code></pre>
+</div>
+<div id="combine-the-underlying-elements-from-the-new-list-into-a-single-atomic-vector-with-the-c-function." class="section level4">
+<h4>Combine the underlying elements from the new list into a single
+atomic vector with the c() function.</h4>
+<pre><code>combo_vector &lt;- c(new_list[[1]], new_list[[2]], new_list[[3]])</code></pre>
+</div>
+<div id="what-is-the-data-type-of-this-vector" class="section level4">
+<h4>What is the data type of this vector?</h4>
+<div id="character" class="section level5">
+<h5>Character</h5>
+<pre><code>typeof(combo_vector)</code></pre>
+</div>
+</div>
+</div>
+<div id="question-3" class="section level3">
+<h3>Question 3</h3>
+<div id="create-a-data-frame-with-the-two-variables-columns-and-26-cases-rows-below" class="section level4">
+<h4>Create a data frame with the two variables (= columns) and 26 cases
+(= rows) below:</h4>
+<div id="call-the-first-variable-my_unis-and-fill-it-with-26-random-uniform-values-from-0-to-10" class="section level5">
+<h5>Call the first variable my_unis and fill it with 26 random uniform
+values from 0 to 10</h5>
+<pre><code>my_unis &lt;- runif(26, min = 0, max = 10)</code></pre>
+</div>
+<div id="call-the-second-variable-my_letters-and-fill-it-with-26-capital-letters-in-random-order." class="section level5">
+<h5>Call the second variable my_letters and fill it with 26 capital
+letters in random order.</h5>
+<pre><code>my_letters &lt;- c(sample(LETTERS,size=26, replace = FALSE))
+
+dFrame &lt;- data.frame(my_unis,my_letters, stringsAsFactors=FALSE)
+print(dFrame)</code></pre>
+</div>
+<div id="for-the-first-variable-use-a-single-line-of-code-in-r-to-select-4-random-rows-and-replace-the-numerical-values-in-those-rows-with-na." class="section level5">
+<h5>For the first variable, use a single line of code in R to select 4
+random rows and replace the numerical values in those rows with NA.</h5>
+<pre><code>dFrame[sample(length(my_unis), size = 4, replace = FALSE),1] &lt;- NA
+print(dFrame)</code></pre>
+</div>
+<div id="for-the-first-variable-write-a-single-line-of-r-code-to-identify-which-rows-have-the-missing-values." class="section level5">
+<h5>For the first variable, write a single line of R code to identify
+which rows have the missing values.</h5>
+<pre><code>which(!complete.cases(dFrame$my_unis))</code></pre>
+</div>
+<div id="re-order-the-entire-data-frame-to-arrange-the-second-variable-in-alphabetical-order" class="section level5">
+<h5>Re-order the entire data frame to arrange the second variable in
+alphabetical order</h5>
+<pre><code>dFrame &lt;-dFrame[order(dFrame$my_letters),]
+print(dFrame)</code></pre>
+</div>
+</div>
+<div id="calculate-the-column-mean-for-the-first-variable." class="section level4">
+<h4>Calculate the column mean for the first variable.</h4>
+<pre><code>mean(dFrame$my_unis, na.rm = TRUE)</code></pre>
+</div>
+</div>
 </div>
 
 
