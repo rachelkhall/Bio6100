@@ -43,7 +43,7 @@ sdML <- normPars$estimate["sd"]
 
 xval <- seq(0,max(z$myVar),len=length(z$myVar))
 
-stat <- stat_function(aes(x = xval, y = ..y..), fun = dnorm, colour="cornflowerblue", n = length(z$myVar), args = list(mean = meanML, sd = sdML))
+stat <- stat_function(aes(x = xval, y = ..y..), fun = dnorm, colour="mediumorchid", n = length(z$myVar), args = list(mean = meanML, sd = sdML))
 p1 + stat
 
 # Plot exponential probability density
@@ -62,7 +62,7 @@ gammaPars <- fitdistr(z$myVar,"gamma")
 shapeML <- gammaPars$estimate["shape"]
 rateML <- gammaPars$estimate["rate"]
 
-stat4 <- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour="purple2", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
+stat4 <- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour="navy", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
 p1 + stat + stat2 + stat3 + stat4
 
 #Plot beta probability
@@ -83,6 +83,8 @@ normPars$loglik
 gammaPars$loglik 
 expoPars$loglik
 
+# Gamma distribution would be the best fit as it has the highest number for likelihood
+
 #Simulating Data
 z <- rgamma(n= 60, shape=shapeML, rate=rateML) 
 z <- data.frame(1:60,z)
@@ -93,7 +95,7 @@ str(z)
 z <- na.omit(z)
 
 p2 <- ggplot(data=z, aes(x=myVar, y=..density..)) +
-  geom_histogram(color="grey80",fill="steelblue1",size=0.2) 
+  geom_histogram(color="snow",fill="darkseagreen",size=0.2) 
 print(p2)
 
 normPars <- fitdistr(z$myVar,"normal")
@@ -105,9 +107,10 @@ gammaPars <- fitdistr(z$myVar,"gamma")
 shapeML <- gammaPars$estimate["shape"]
 rateML <- gammaPars$estimate["rate"]
 
-stat5 <- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour="green", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
+stat5 <- stat_function(aes(x = xval, y = ..y..), fun = dgamma, colour="darkslategrey", n = length(z$myVar), args = list(shape=shapeML, rate=rateML))
 p2 + stat5
 
 p1 + stat4
 
 # Comparing the simulated plot to the data we imported 
+# While the simulated data does not exactly match the original data set, it does show similar trends in the values. Both the simulated data and the original data are right skewed as well, which illustrates this similarity. 

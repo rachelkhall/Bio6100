@@ -19,3 +19,12 @@ HTML Webpage for Computational Biology, Spring 2024.
 
 ### Homework 4
 [Link to HW4](HW4.html)
+
+### Homework 5
+[Link to HW5](HW5.html)
+
+### Homework 6
+[Link to HW6](HW6.html)
+
+### Homework 7
+[Link to HW7](Homework7.html)

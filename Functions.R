@@ -2,15 +2,10 @@ title: 'Functions'
 # Class 2/27
 
 ---
-  
-  ```{r setup, include=FALSE}
-knitr::opts_chunk$set(eval = TRUE)
-```
 
 
 ### Functions in R
-- Everything in R is a function
-```{r, eval=FALSE}
+# Everything in R is a function
 sum(3,2) # a "prefix" function
 3 + 2 # an "operator", but it is actually a function
 `+`(3,2) # the operator is an "infix" function
@@ -27,10 +22,10 @@ print(read.table)
 sd # shows the code
 sd(c(3,2)) # call the function with parameters
 # sd() # call function with default values for parameters
-```
+
 
 ### The Anatomy Of A User-Defined Function
-```
+
 functionName <- function(parX=defaultX,parY=defaultY,parZ=defaultZ) { 
   
   # curly bracket open marks the start of the function body
@@ -54,18 +49,18 @@ functionName()
 
 # calls the function with user-specified values for each paramater
 functionName(parX=myMatrix,parY="Order",parZ=c(0.3,1.6,2,6))
-```
+
 ### Stylistic Conventions For Programming Functions
-- Use prominent hash character fencing at start and at finish
-- Give a header with the function name, description input, and output
-- names inside functions can be short
-- functions should be simple and short, no more than a screenful
-- if too complex, break into multiple shorter functions
-- provide default values for all function arguments
-- ideally use random numbers as defaults for rapid testing
+# - Use prominent hash character fencing at start and at finish
+# - Give a header with the function name, description input, and output
+# - names inside functions can be short
+# - functions should be simple and short, no more than a screenful
+# - if too complex, break into multiple shorter functions
+# - provide default values for all function arguments
+# - ideally use random numbers as defaults for rapid testing
 
 ### A Sample Function For Hardy-Weinberg Equilibrium
-```{r, eval=FALSE}
+
 ##################################################
 # FUNCTION: HardyWeinberg
 # input: an allele frequency p (0,1)
@@ -86,10 +81,10 @@ HardyWeinberg(p=0.5) # pass to the parameter the value p
 pp <- 0.6 # variable pp is stored in global environment
 HardyWeinberg(p=pp) # pass contents of variable pp to function parameter p
 print(pp) # variable pp is still stored in memory
-```
+
 
 ### Use Multiple `return()` Statements For Different Possible Return Values
-```{r, eval=FALSE}
+
 ##################################################
 # FUNCTION: HardyWeinberg2
 # input: an allele frequency p (0,1)
@@ -111,10 +106,10 @@ HardyWeinberg2()
 HardyWeinberg2(1.1) # OK, print error to screen
 z <- HardyWeinberg2(1.1) # uggh no error printed
 print(z) # Error message was saved to variable z!
-```
+
 
 ### Use `Stop` For True Error Trapping
-```{r, eval=FALSE}
+
 ##################################################  
 # FUNCTION: HardyWeinberg3
 # input: an allele frequency p (0,1)
@@ -135,15 +130,14 @@ HardyWeinberg3<- function(p=runif(1)) {
 HardyWeinberg3()
 #  z <- HardyWeinberg3(1.1) 
 
-```
 
 ### Scoping In Functions
-- global variables: visible to all parts of the code; declared in main body
-- local variables: visible only within function; declared in function or passed to function through parameters
-- functions "can" see variables in global environment
-- global environment cannot see variables in function environment
+# - global variables: visible to all parts of the code; declared in main body
+# - local variables: visible only within function; declared in function or passed to function through parameters
+# - functions "can" see variables in global environment
+# - global environment cannot see variables in function environment
 
-```{r, eval=FALSE}
+
 myFunc <- function(a=3,b=4) {
   z <- a + b
   return(z)
@@ -167,11 +161,10 @@ myFuncOK <- function(a=3) {
 
 myFuncOK() # no problems now
 print(bb) # but this variable is still hidden from the global environment
-```
+
 
 ### Simple regression function
 
-```{r, eval=FALSE}
 ##################################################
 # FUNCTION: fitLinear 
 # fits simple regression line
@@ -187,10 +180,10 @@ fitLinear <- function(x=runif(20),y=runif(20)) {
 }
 ##################################################
 fitLinear()
-```
+
 
 ### Creating a more complex default value
-```{r, eval=FALSE}
+
 ##################################################
 # FUNCTION: fitLinear2       
 # fits simple regression line
@@ -212,14 +205,12 @@ fitLinear2 <- function(p=NULL) {
 fitLinear2()
 myPars <-list(x=1:10,y=runif(10))
 fitLinear2(myPars)
-```
 
 # Using `do.call` To Pass A List Of Parameters To A Function
-```{r, eval=FALSE}
+
 z <- c(runif(99),NA)
 mean(z) # oops, mean doesn't work if there is an NA
 mean(x=z,na.rm=TRUE) # change the default value for na.rm
 mean(x=z,na.rm=TRUE,trim=0.05) # check out the "trim" option in help
 l <- list(x=z,na.rm=TRUE,trim=0.05) # bundle paramaters as a list
 do.call(mean,l) # use the do.call function with the function name and the parameter list
-```
