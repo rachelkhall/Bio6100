@@ -1,9 +1,13 @@
-# Homework 7 
-### Rachel Hall
-### Creating fake data sets to explore hypothesis
+---
+title: "Homework 7"
+author: "Rachel Hall"
+date: "Feb 28, 2024"
+output: html_document
+---
 
-<!-- knitr::opts_chunk$set(collapse = TRUE) -->
-```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
 library(ggplot2)
 library(MASS) 
 ```

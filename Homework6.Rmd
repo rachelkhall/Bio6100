@@ -1,6 +1,9 @@
-# Homework 6 
-### 21 Feb 2024
-### Rachel Hall 
+---
+title: "Homework 6"
+author: "Rachel Hall"
+date: "Feb 21, 2024"
+output: html_document
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
