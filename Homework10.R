@@ -52,28 +52,28 @@ product_matrix(r=3, c=5)
 # 4a. Simulate a dataset with 3 groups of data, each group drawn from a distribution with a different mean. The final data frame should have 1 column for group and 1 column for the response variable.
 
 library(ggplot2)
-# gendata <- function(z = NULL) {
-#   if(is.null(z)) {
-#     x <- runif(10, min = 0, max = 50)
-#     y <- c(x + runif(5)*10)
-#     df <- data.frame(group=seq_along(x),
-#                      x,
-#                      y)
-#   } else {
-#     df <-read.table(file=z,
-#                     header=TRUE,
-#                     sep=",")}
-#   return(df)
-# }
+
 x <- c(rep("Control",5),rep("Treatment",5))
-y <- runif(10, min = 0, max = 50)
+y <- runif(10, min = 1, max = 50)
 df <- data.frame(group=seq_along(x),x,y)
 print(df)
 
 # 4b. Write a custom function that 1) reshuffles the response variable, and 2) calculates the mean of each group in the reshuffled data. Store the means in a vector of length 3.
 
-shuffle <- function(z=NULL) {
-  if(is.null(z)) {
-    df
-  }
+shuffle_data <- function(z=NULL) {
+  if(is.null(z)){
+    x_obs <- 1:20
+    y_obs <- x_obs + 3*rnorm(20)
+    z <- data.frame(x_obs,y_obs)} # set up data frame                 
+  z[,2] <- sample(z[,2]) # use sample function with defaults to reshuffle column
+  
+  return(z)
 }
+
+# 4c. Use a for loop to repeat the function in b 100 times. Store the results in a data frame that has 1 column indicating the replicate number and 1 column for each new group mean, for a total of 4 columns.
+
+
+
+
+
+# 4d. Use qplot() to create a histogram of the means for each reshuffled group. Or, if you want a challenge, use ggplot() to overlay all 3 histograms in the same figure. How do the distributions of reshuffled means compare to the original means?

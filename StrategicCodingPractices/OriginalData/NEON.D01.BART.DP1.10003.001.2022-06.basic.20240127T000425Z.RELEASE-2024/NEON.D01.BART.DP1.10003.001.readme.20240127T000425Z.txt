@@ -1,0 +1,243 @@
+This data package was produced by and downloaded from the National Ecological Observatory Network (NEON). NEON is funded by the National Science Foundation (Awards 0653461, 0752017, 1029808, 1138160, 1246537, 1638695, 1638696, 1724433) and managed cooperatively by Battelle. These data are provided under the terms of the NEON data policy at https://www.neonscience.org/data-policy.
+
+
+
+DATA PRODUCT INFORMATION
+
+------------------------
+
+
+
+ID: NEON.DOM.SITE.DP1.10003.001
+
+
+
+Name: Breeding landbird point counts
+
+
+
+Description: Count, distance from observer, and taxonomic identification of breeding landbirds observed during point counts
+
+
+
+NEON Science Team Supplier: Terrestrial Observation System
+
+
+
+Abstract: This data product contains the quality-controlled, native sampling resolution data from NEON's breeding landbird sampling. Breeding landbirds are defined as “smaller birds (usually exclusive of raptors and upland game birds) not usually associated with aquatic habitats” (Ralph et al. 1993). The breeding landbird point counts product provides records of species identification of all individuals observed during the 6-minute count period, as well as metadata which can be used to model detectability, e.g., weather, distances from observers to birds, and detection methods. The NEON point count method is adapted from the Integrated Monitoring in Bird Conservation Regions (IMBCR): Field protocol for spatially-balanced sampling of landbird populations (Hanni et al. 2017; http://bit.ly/2u2ChUB). For additional details, see protocol [NEON.DOC.014041](http://data.neonscience.org/api/v0/documents/NEON.DOC.014041vF): TOS Protocol and Procedure: Breeding Landbird Abundance and Diversity and science design [NEON.DOC.000916](http://data.neonscience.org/api/v0/documents/NEON.DOC.000916vB): TOS Science Design for Breeding Landbird Abundance and Diversity.
+
+Latency: The expected time from data and/or sample collection in the field to data publication is as follows, for each of the data tables (in days) in the downloaded data package. See the Data Product User Guide for more information.
+ 
+brd_countdata: 120
+
+brd_perpoint: 120
+
+brd_personnel: 120
+
+brd_references: 120
+
+brd_identificationHistory: 7
+
+
+
+Brief Design Description: Depending on the size of the site, sampling for this product occurs at either randomly distributed individual points or grids of nine points each. At larger sites, point count sampling occurs at five to ten 9-point grids, with grid centers collocated with distributed base plot centers (where plant, beetle, and/or soil sampling may also occur), if possible. At smaller sites (i.e., sites that cannot accommodate a minimum of 5 grids) point counts occur at the southwest corner (point 21) of 5-25 distributed base plots. Point counts are conducted once per breeding season at large sites and twice per breeding season at smaller sites. Point counts are six minutes long, with each minute tracked by the observer, following a two-minute settling-in period. All birds are recorded to species and sex, whenever possible, and the distance to each individual or flock is measured with a laser rangefinder, except in the case of flyovers.
+
+
+
+Brief Study Area Description: This sampling occurs at all NEON terrestrial sites.
+
+
+
+Sensor(s): 
+
+
+
+Keywords: Animalia, invasive species, native species, Aves, avian, introduced species, population, brd, vertebrates, point counts, birds, Chordata, landbirds, animals, taxonomy, community composition, diversity, distance sampling, biodiversity, species composition
+
+
+
+
+
+QUERY INFORMATION
+
+-----------------
+
+
+
+Date-Time for Data Publication: 2023-12-29 05:32 (UTC)
+
+Start Date-Time for Queried Data: 2022-06-01 18:00 (UTC)
+
+End Date-Time for Queried Data: 2022-06-26 13:06 (UTC)
+
+
+
+Site: BART
+
+Geographic coordinates (lat/long datum): 
+Domain: D01
+
+
+
+
+
+DATA PACKAGE CONTENTS
+
+---------------------
+
+
+
+This folder contains the following documentation files:
+
+
+
+- This readme file: NEON.D01.BART.DP1.10003.001.readme.20240127T000425Z.txt
+
+- Term descriptions, data types, and units: NEON.D01.BART.DP1.10003.001.variables.20231229T053256Z.csv
+
+- Data entry validation and parsing rules: NEON.D01.BART.DP1.10003.001.validation.20231229T053256Z.csv
+
+- Machine-readable metadata file describing the data package: NEON.D01.BART.DP1.10003.001.EML.20220601-20220626.20240127T000425Z.xml. This file uses the Ecological Metadata Language schema. Learn more about this specification and tools to parse it at https://www.neonscience.org/about/faq.
+
+- Other related documents, such as engineering specifications, field protocols and data processing documentation, are available. Please visit https://data.neonscience.org/data-products/DP1.10003.001 for more information.
+
+
+
+
+
+This folder also contains 2 data files:
+
+NEON.D01.BART.DP1.10003.001.brd_countdata.2022-06.basic.20231229T053256Z.csv - Point count data for breeding landbirds
+NEON.D01.BART.DP1.10003.001.brd_perpoint.2022-06.basic.20231229T053256Z.csv - Per point metadata for breeding landbirds
+
+
+
+Basic download package definition: The basic package contains the per point metadata table that includes data pertaining to the observer and the weather conditions and the count data table that includes all of the observational data.
+
+
+
+Expanded download package definition: The expanded package includes two additional tables and two additional fields within the count data table. The personnel table provides institutional information about each observer, as well as their performance on identification quizzes, where available. The references tables provides the list of resources used by an observer to identify birds. The additional fields in the countdata table are family and nativeStatusCode, which are derived from the NEON master list of birds.
+
+
+
+
+
+FILE NAMING CONVENTIONS
+-----------------------
+
+NEON data files are named using a series of component abbreviations separated by periods. File naming conventions for NEON data files differ between NEON science teams. A file will have the same name whether it is accessed via NEON's data portal or API. Please visit https://www.neonscience.org/data-formats-conventions for a full description of the naming conventions.
+
+ISSUE LOG
+
+----------
+
+
+
+This log provides a list of issues that were identified during data collection or processing, prior to publication of this data package. For a more recent log, please visit this data product's detail page at https://data.neonscience.org/data-products/DP1.10003.001.
+
+
+
+Issue Date: 2023-12-22
+Issue: Identification history: updates to taxonomic determinations were not previously tracked.
+       Date Range: 2012-01-01 to 2023-01-01
+       Location(s) Affected: All
+Resolution Date: 2024-01-01
+Resolution: In provisional data, RELEASE-2024, and all subsequent releases, if taxonomic determinations are updated for any records, past determinations are archived in the `brd_identificationHistory` table, where the archived determinations are linked to current records using identificationHistoryID.
+
+Issue Date: 2023-05-09
+Issue: D01 state-level taxa obfuscation: Prior to the 2024 data release, publication of species identifications were obfuscated to a higher taxonomic rank when the taxon was found to be listed as threatened, endangered, or sensitive by any state within the domain. Obfuscating state-listed taxa across an entire domain has created challenges for data users studying biodiversity.
+       Date Range: 2012-01-01 to 2023-04-25
+       Location(s) Affected: D01
+Resolution Date: 2023-12-31
+Resolution: To reduce the number of records in which taxonomic identifications are obfuscated in D01, the state-level obfuscation routine has been applied to data using site-level granularity as of 25 April 2023. Previously published data have been reprocessed using the more precise obfuscation routine for the 2024 data release and onward. Federally listed threatened and endangered or sensitive species remain obfuscated at all sites.
+
+Issue Date: 2023-11-21
+Issue: Incorrect grid pointIDs: Grid pointIDs were transposed along the diagonal during conversion from numeric to alphanumeric values, such that data collected from the upper right corner grid point (A3) were labeled as coming from the lower left corner grid point (C1).
+       Date Range: 2013-06-05 to 2022-07-23
+       Location(s) Affected: All 32 terrestrial sites where point counts are collected in grids (BARR, BART, BONA, CLBJ, CPER, DEJU, DSNY, GRSM, GUAN, HARV, HEAL, JERC, JORN, KONZ, MLBS, MOAB, NIWO, OAES, ONAQ, ORNL, OSBS, RMNP, SJER, SRER, STEI, TALL, TEAK, UKFS, UNDE, WOOD, WREF, YELL).
+Resolution Date: 2023-12-31
+Resolution: We edited all transposed grid pointID values to include the correct location information. As an additional measure to eliminate the possibility for future transposition errors, alphanumeric labels (A1-C3) were converted to numeric values (1-9) for all PointID data. See the data notification https://www.neonscience.org/impact/observatory-blog/bird-point-ids-within-grids-were-transposed-resulting-inaccurate-point for more details, including diagrams illustrating the error and the new numbering system. This issue will be resolved from this point forward in provisional data, and will be resolved in the 2024 data release onward.
+
+Issue Date: 2022-09-13
+Issue: Toolik Field Station required a quarantine period prior to starting work in the 2020, 2021, and 2022 field seasons to protect all personnel during the COVID-19 pandemic. This complicated NEON field scheduling logistics, which typically involves repeated travel across the state on short time frames. Consequently, NEON reduced staffing traveling to Toolik and was thus unable to complete all planned sampling efforts. Missed data collection events are indicated in data records via the samplingImpractical field.
+       Date Range: 2020-03-23 to 2022-12-31
+       Location(s) Affected: TOOL
+Resolution Date: 2022-10-31
+Resolution: The quarantine policy at Toolik Field Station ended after the 2022 field season.
+
+Issue Date: 2022-09-13
+Issue: Severe flooding destroyed several roads into Yellowstone National Park in June 2022, making the YELL and BLDE sites inaccessible to NEON staff. Observational data collection was halted during this time. Canceled data collection events are indicated in data records via the samplingImpractical field.
+       Date Range: 2022-06-12 to 2022-10-31
+       Location(s) Affected: YELL
+Resolution Date: 2022-10-31
+Resolution: Normal operations resumed on October 31, 2022, when the National Park Service opened a newly constructed road from Gardiner, MT to Mammoth, WY with minimal restrictions. For more details about data impacts, see Data Notification https://www.neonscience.org/impact/observatory-blog/data-impacts-neons-yellowstone-sites-yell-blde-due-catastrophic-flooding-0
+
+Issue Date: 2021-01-06
+Issue: Safety measures to protect personnel during the COVID-19 pandemic resulted in reduced or canceled sampling activities for extended periods at NEON sites. Data availability may be reduced during this time.
+       Date Range: 2020-03-23 to 2021-12-31
+       Location(s) Affected: All
+Resolution Date: 2021-12-31
+Resolution: The primary impact of the pandemic on observational data was reduced data collection. Training procedures and data quality reviews were maintained throughout the pandemic, although some previously in-person training was conducted virtually.  Scheduled measurements and sampling that were not carried out due to COVID-19 or any other causes are indicated in data records via the samplingImpractical data field.
+
+Issue Date: 2021-12-03
+Issue: EventIDs don't match: eventIDs in `brd_perpoint` and `brd_countdata` records didn't always match.
+       Date Range: 2015-01-01 to 2021-12-31
+       Location(s) Affected: All
+Resolution Date: 2021-12-31
+Resolution: The inconsistent time zone issue within the date component of the eventID was resolved by stripping time of day from the eventID.
+
+Issue Date: 2021-12-09
+Issue: State-level taxa obfuscation: Prior to the 2022 data release, publication of species identifications were obfuscated to a higher taxonomic rank when the taxon was found to be listed as threatened, endangered, or sensitive at the state level where the observation was recorded. Obfuscating state-listed taxa has created challenges for data users studying biodiversity.
+       Date Range: 2012-01-01 to 2021-12-31
+       Location(s) Affected: All
+Resolution Date: 2021-12-31
+Resolution: The state-level obfuscation routine was removed from the data publication process at all locations excluding sites located in D01 and D20. Data have been reprocessed to remove the obfuscation of state-listed taxa. Federally listed threatened and endangered or sensitive species remain obfuscated at all sites and sensitive species remain redacted at National Park sites.
+
+Issue Date: 2020-10-28
+Issue: No sampling impractical: There was not a way to indicate that a scheduled sampling event did not occur.
+       Date Range: 2013-01-01 to 2020-01-01
+       Location(s) Affected: All
+Resolution Date: 2020-01-01
+Resolution: The fields samplingImpracticalRemarks and samplingImpractical were added prior to the 2020 field season. The contractor supplies the samplingImpracticalRemarks field, and this field autopopulates the samplingImpractical field. The samplingImpractical field has a value other than OK if something prevented sampling from occurring.
+
+Issue Date: 2021-06-24
+Issue: Reduced sampling: It was too expensive to have a maximum of 15 grids per site.
+       Date Range: 2012-01-01 to 2018-03-28
+       Location(s) Affected: All
+Resolution Date: 2018-03-28
+Resolution: In version J of the bird protocol NEON reduced the maximum number grids per site from 15 to 10.
+
+
+
+
+
+ADDITIONAL INFORMATION
+
+----------------------
+
+
+
+Protection of species of concern: At most sites, taxonomic IDs of species of concern have been 'fuzzed', i.e., reported at a higher taxonomic rank than the raw data, to avoid publishing locations of sensitive species. For a few sites with stricter regulations (e.g., Great Smoky Mountains National Park (GRSM)), records for species of concern are not published. 
+
+
+
+Queries for this data product will return data collected during the date range specified for `brd_perpoint` and `brd_countdata`, but will return data from all dates for `brd_personnel` (quiz scores may occur over time periods which are distinct from when sampling occurs) and `brd_references` (which apply to a broad range of sampling dates). A record from `brd_perPoint` should have 6+ child records in `brd_countdata`, at least one per pointCountMinute. Duplicates or missing data may exist where protocol and/or data entry aberrations have occurred; users should check data carefully for anomalies before joining tables. Taxonomic IDs of species of concern have been 'fuzzed'; see data package readme files for more information. If taxonomic determinations have been updated for any records in the table `brd_countdata`, past determinations are archived in the `brd_identificationHistory` table, where the archived determinations are linked to current records using identificationHistoryID.
+
+
+
+NEON DATA POLICY AND CITATION GUIDELINES
+
+----------------------------------------
+
+
+
+A citation statement is available in this data product's detail page at https://data.neonscience.org/data-products/DP1.10003.001. Please visit https://www.neonscience.org/data-policy for more information about NEON's data policy and citation guidelines.
+
+
+
+DATA QUALITY AND VERSIONING
+---------------------------
+
+NEON data are initially published with a status of Provisional, in which updates to data and/or processing algorithms will occur on an as-needed basis, and query reproducibility cannot be guaranteed. Once data are published as part of a Data Release, they are no longer provisional, and are associated with a stable DOI.
+
+To learn more about provisional versus released data, please visit https://www.neonscience.org/data-revisions-releases.

@@ -1,0 +1,3202 @@
+<?xml version="1.0" encoding="UTF-8"?><eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" packageId="" scope="system" system="https://www.neonscience.org">
+    <dataset id="NEON.D01.BART.DP1.10003.001.20220601-20220626">
+        <shortName>NEON BART Breeding landbird point counts 2022-06-01 to 2022-06-26</shortName>
+        <title>NEON Breeding landbird point counts at BART, Northeast Domain, 2022-06-01 to 2022-06-26</title>
+        <creator id="neon_contact"/>
+        <creator id="neon_contact">
+                        
+            <organizationName>National Ecological Observatory Network (NEON)</organizationName>
+                        
+            <address>
+                                
+                <deliveryPoint>1685 38th Street, Suite 100</deliveryPoint>
+                                
+                <city>Boulder</city>
+                                
+                <administrativeArea>CO</administrativeArea>
+                                
+                <postalCode>80301</postalCode>
+                                
+                <country>USA</country>
+                            
+            </address>
+                        
+            <phone phonetype="voice">720-746-4844</phone>
+                        
+            <electronicMailAddress/>
+                        
+            <onlineUrl>http://www.neonscience.org</onlineUrl>
+                    
+        </creator>
+        <metadataProvider id="neon_contact"/>
+        <metadataProvider>
+                        
+            <organizationName>National Ecological Observatory Network (NEON)</organizationName>
+                        
+            <address>
+                                
+                <deliveryPoint>1685 38th Street, Suite 100</deliveryPoint>
+                                
+                <city>Boulder</city>
+                                
+                <administrativeArea>CO</administrativeArea>
+                                
+                <postalCode>80301</postalCode>
+                                
+                <country>USA</country>
+                            
+            </address>
+                        
+            <phone phonetype="voice">720-746-4844</phone>
+                        
+            <electronicMailAddress/>
+                        
+            <onlineUrl>http://www.neonscience.org</onlineUrl>
+                    
+        </metadataProvider>
+        <pubDate>2023-12-29</pubDate>
+        <language>English</language>
+        <intellectualRights>
+            	
+            
+            <para>NEON Data Usage and Citation Policy</para>
+            <para>Copyright © 2020-2021 National Ecological Observatory Network</para>
+            <para>All data collected by NEON and provided as data products, with the exception of data related to rare, threatened, or endangered (RTE) species, are released to the “public domain” under Creative Commons CC0 1.0 “No Rights Reserved” (https://creativecommons.org/publicdomain/zero/1.0/). No copyright has been applied to NEON data; any person may copy, modify, or distribute the data, for commercial or non-commercial purposes, without asking for permission. NEON data may still be subject to other laws or rights such as for privacy, and NEON makes no warranties about the data and disclaims all liability.  When using or citing NEON data, no implication should be made about endorsement by NEON.</para>
+            <para>In most countries, data and facts are not copyrightable. By putting NEON data into the public domain, we encourage broad use, particularly in scientific analyses and data aggregations. However, please be mindful of the following scholarly norms:</para>
+            <para>* NEON data should be used in a way that is mindful of the limitations of the data, using the documentation associated with the data packages as a guide.</para>
+            <para>* Unlike most scientific data, NEON data is not associated with individual authors; rather, the ‘author’ of data produced by the Observatory is NEON itself. Attributions and citations should be made to NEON for any use of the data. More information about NEON's Citation Guidelines may be found at https://www.neonscience.org/data-samples/data-policies-citation.</para>
+
+
+        </intellectualRights>
+        <distribution>
+                        
+            <online>
+                                
+                <url function="information">https://www.neonscience.org/</url>
+                            
+            </online>
+                    
+        </distribution>
+        <coverage>
+                        
+            <geographicCoverage id="BART">
+                                
+                <geographicDescription>BART, D01</geographicDescription>
+                                
+                <boundingCoordinates>
+                                        
+                    <westBoundingCoordinate>-71.287375</westBoundingCoordinate>
+                                        
+                    <eastBoundingCoordinate>-71.287375</eastBoundingCoordinate>
+                                        
+                    <northBoundingCoordinate>44.063889</northBoundingCoordinate>
+                                        
+                    <southBoundingCoordinate>44.063889</southBoundingCoordinate>
+                                        
+                    <boundingAltitudes>
+                                                
+                        <altitudeMinimum>274.04928</altitudeMinimum>
+                                                
+                        <altitudeMaximum>274.04928</altitudeMaximum>
+                                                
+                        <altitudeUnits>meter</altitudeUnits>
+                                            
+                    </boundingAltitudes>
+                                    
+                </boundingCoordinates>
+                            
+            </geographicCoverage>
+                        
+            <temporalCoverage>
+                                
+                <rangeOfDates>
+                                        
+                    <beginDate>
+                                                
+                        <calendarDate>2022-06-01</calendarDate>
+                                            
+                    </beginDate>
+                                        
+                    <endDate>
+                                                
+                        <calendarDate>2022-06-26</calendarDate>
+                                            
+                    </endDate>
+                                    
+                </rangeOfDates>
+                            
+            </temporalCoverage>
+                    
+        </coverage>
+        <purpose>Count, distance from observer, and taxonomic identification of breeding landbirds observed during point counts</purpose>
+        <maintenance>
+                        
+            <description>
+                                
+                
+                <para>These data are available via the NEON website (https://www.neonscience.org).</para>
+                            
+            </description>
+                        
+            <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+                    
+        </maintenance>
+        <contact id="neon_contact"/>
+        <contact>
+                        
+            <organizationName>National Ecological Observatory Network (NEON)</organizationName>
+                        
+            <address>
+                                
+                <deliveryPoint>1685 38th Street, Suite 100</deliveryPoint>
+                                
+                <city>Boulder</city>
+                                
+                <administrativeArea>CO</administrativeArea>
+                                
+                <postalCode>80301</postalCode>
+                                
+                <country>USA</country>
+                            
+            </address>
+                        
+            <phone phonetype="voice">720-746-4844</phone>
+                        
+            <electronicMailAddress/>
+                        
+            <onlineUrl>http://www.neonscience.org</onlineUrl>
+                    
+        </contact>
+        <publisher>
+                        
+            <organizationName>National Ecological Observatory Network (NEON)</organizationName>
+                        
+            <address>
+                                
+                <deliveryPoint>1685 38th Street, Suite 100</deliveryPoint>
+                                
+                <city>Boulder</city>
+                                
+                <administrativeArea>CO</administrativeArea>
+                                
+                <postalCode>80301</postalCode>
+                                
+                <country>USA</country>
+                            
+            </address>
+                        
+            <phone phonetype="voice">720-746-4844</phone>
+                        
+            <electronicMailAddress/>
+                        
+            <onlineUrl>http://www.neonscience.org</onlineUrl>
+                    
+        </publisher>
+        <project>
+                        
+            <title>National Ecological Observatory Network (NEON)</title>
+                        
+            <personnel>
+                                
+                <organizationName>National Ecological Observatory Network (NEON)</organizationName>
+                                
+                <address>
+                                        
+                    <deliveryPoint>1685 38th Street, Suite 100</deliveryPoint>
+                                        
+                    <city>Boulder</city>
+                                        
+                    <administrativeArea>CO</administrativeArea>
+                                        
+                    <postalCode>80301</postalCode>
+                                        
+                    <country>USA</country>
+                                    
+                </address>
+                                
+                <phone phonetype="voice">720-746-4844</phone>
+                                
+                <electronicMailAddress>neonscience@battelleecology.org</electronicMailAddress>
+                                
+                <onlineUrl>https://www.neonscience.org</onlineUrl>
+                                
+                <role>originator</role>
+                            
+            </personnel>
+                        
+            <abstract>
+                                
+                
+                <para>The National Ecological Observatory Network is a program sponsored by the National Science Foundation and cooperatively managed by Battelle.</para>
+                                
+                
+                <para>NEON's mission is to design, implement, and operate continental-scale research infrastructure to open new horizons in ecological science and education, and to enable ecological analyses and forecasts for the benefit of society.</para>
+                            
+            </abstract>
+                        
+            <funding>
+                <para>NEON is funded by several National Science Foundation (NSF) awards</para></funding>       
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>1724433</awardNumber>
+                    <title>National Ecological Observatory Network: Operations Activities</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1724433</awardUrl>
+                </award>     
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>1638696</awardNumber>
+                    <title>National Ecological Observatory Network: Operations Activities</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1638696</awardUrl>
+                </award>              
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>1638695</awardNumber>
+                    <title>National Ecological Observatory Network: Construction and Transition</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1638695</awardUrl>
+                </award>            
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>1246537</awardNumber>
+                    <title>NEON Initial Operations</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1246537</awardUrl>
+                </award>            
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>1138160</awardNumber>
+                    <title>Construction and Operations of the National Ecological Observatory</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1138160</awardUrl>
+                </award>
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>1029808</awardNumber>
+                    <title>Cooperative Support Agreement for Major Research Equipment and Facilities Construction (MREFC) of the National Ecological Observatory</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1029808</awardUrl>
+                </award>
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>0752017</awardNumber>
+                    <title>Organizational and Project Management Support to complete the NEON Construction Ready Design and Project Execution Plan.</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=0752017</awardUrl>
+                </award>
+                <award>
+                    <funderName>National Science Foundation</funderName>
+                    <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                    <awardNumber>0653461</awardNumber>
+                    <title>Initial NEON Procurements for Science and Organizational Development</title>
+                    <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=0653461</awardUrl>
+                </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>1724433</awardNumber>
+                                
+                <title>National Ecological Observatory Network: Operations Activities</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1724433</awardUrl>
+                            
+            </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>1638696</awardNumber>
+                                
+                <title>National Ecological Observatory Network: Operations Activities</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1638696</awardUrl>
+                            
+            </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>1638695</awardNumber>
+                                
+                <title>National Ecological Observatory Network: Construction and Transition</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1638695</awardUrl>
+                            
+            </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>1246537</awardNumber>
+                                
+                <title>NEON Initial Operations</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1246537</awardUrl>
+                            
+            </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>1138160</awardNumber>
+                                
+                <title>Construction and Operations of the National Ecological Observatory</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1138160</awardUrl>
+                            
+            </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>1029808</awardNumber>
+                                
+                <title>Cooperative Support Agreement for Major Research Equipment and Facilities Construction (MREFC) of the National Ecological Observatory</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1029808</awardUrl>
+                            
+            </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>0752017</awardNumber>
+                                
+                <title>Organizational and Project Management Support to complete the NEON Construction Ready Design and Project Execution Plan.</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=0752017</awardUrl>
+                            
+            </award>
+                        
+            <award>
+                                
+                <funderName>National Science Foundation</funderName>
+                                
+                <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+                                
+                <awardNumber>0653461</awardNumber>
+                                
+                <title>Initial NEON Procurements for Science and Organizational Development</title>
+                                
+                <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=0653461</awardUrl>
+                            
+            </award>
+                        
+            <studyAreaDescription>
+                                
+                <citation id="neon_2011_sciencedesign">
+                                        
+                    <title>"2011 Science Strategy: Enabling Continental-Scale Ecological Forecasting"</title>
+                                        
+                    <creator>
+                                                
+                        <organizationName>National Ecological Observatory Network (NEON)</organizationName>
+                                                
+                        <address>
+                                                        
+                            <deliveryPoint>1685 38th Street, Suite 100</deliveryPoint>
+                                                        
+                            <city>Boulder</city>
+                                                        
+                            <administrativeArea>CO</administrativeArea>
+                                                        
+                            <postalCode>80301</postalCode>
+                                                        
+                            <country>USA</country>
+                                                    
+                        </address>
+                                                
+                        <phone phonetype="voice">720-746-4844</phone>
+                                                
+                        <electronicMailAddress/>
+                                                
+                        <onlineUrl>http://www.neonscience.org</onlineUrl>
+                                            
+                    </creator>
+                                        
+                    <pubDate>2011</pubDate>
+                                        
+                    <language>English</language>
+                                        
+                    <intellectualRights>Copyright © 2011 National Ecological Observatory Network (NEON). ALL RIGHTS RESERVED</intellectualRights>
+                                        
+                    <distribution>
+                                                
+                        <online>
+                                                        
+                            <url>https://data.neonscience.org/api/v0/documents/NEON_Strategy_2011u2_0</url>
+                                                    
+                        </online>
+                                            
+                    </distribution>
+                                        
+                    <report>
+                                                
+                        <publisher>
+                                                        
+                            <organizationName>National Ecological Observatory Network (NEON)</organizationName>
+                                                        
+                            <address>
+                                                                
+                                <deliveryPoint>1685 38th Street, Suite 100</deliveryPoint>
+                                                                
+                                <city>Boulder</city>
+                                                                
+                                <administrativeArea>CO</administrativeArea>
+                                                                
+                                <postalCode>80301</postalCode>
+                                                                
+                                <country>USA</country>
+                                                            
+                            </address>
+                                                        
+                            <phone phonetype="voice">720-746-4844</phone>
+                                                        
+                            <electronicMailAddress/>
+                                                        
+                            <onlineUrl>http://www.neonscience.org</onlineUrl>
+                                                    
+                        </publisher>
+                                                
+                        <totalPages>56</totalPages>
+                                            
+                    </report>
+                                    
+                </citation>
+                            
+            </studyAreaDescription>
+                        
+            <designDescription>
+                                
+                <citation>
+                                        
+                    <references>neon_2011_sciencedesign</references>
+                                    
+                </citation>
+                            
+            </designDescription>
+                    
+        </project>
+        <dataTable>
+                        
+            <entityName>NEON.D01.BART.DP1.10003.001.brd_countdata.2022-06.basic.20231229T053256Z</entityName>
+                        
+            <attributeList>
+                                
+                <attribute>
+                                        
+                    <attributeName>identificationHistoryID</attributeName>
+                                        
+                    <attributeDefinition>Identifier for linking records related to this identification history</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Identifier for linking records related to this identification history</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>uid</attributeName>
+                                        
+                    <attributeDefinition>Unique ID within NEON database; an identifier for the record</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Unique ID within NEON database; an identifier for the record</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>namedLocation</attributeName>
+                                        
+                    <attributeDefinition>Name of the measurement location in the NEON database</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Name of the measurement location in the NEON database</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>domainID</attributeName>
+                                        
+                    <attributeDefinition>Unique identifier of the NEON domain</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Unique identifier of the NEON domain</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>siteID</attributeName>
+                                        
+                    <attributeDefinition>NEON site code</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>NEON site code</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>plotID</attributeName>
+                                        
+                    <attributeDefinition>Plot identifier (NEON site code_XXX)</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Plot identifier (NEON site code_XXX)</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>plotType</attributeName>
+                                        
+                    <attributeDefinition>NEON plot type in which sampling occurred: tower, distributed or gradient</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>NEON plot type in which sampling occurred: tower, distributed or gradient</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>pointID</attributeName>
+                                        
+                    <attributeDefinition>Identifier for a point location</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>3</code>
+                                                                                
+                                        <definition>3</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>6</code>
+                                                                                
+                                        <definition>6</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>5</code>
+                                                                                
+                                        <definition>5</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>1</code>
+                                                                                
+                                        <definition>1</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>7</code>
+                                                                                
+                                        <definition>7</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>21</code>
+                                                                                
+                                        <definition>21</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>4</code>
+                                                                                
+                                        <definition>4</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>9</code>
+                                                                                
+                                        <definition>9</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>8</code>
+                                                                                
+                                        <definition>8</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>2</code>
+                                                                                
+                                        <definition>2</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>startDate</attributeName>
+                                        
+                    <attributeDefinition>The start date-time or interval during which an event occurred</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <dateTime>
+                                                        
+                            <formatString>yyyy-MM-dd'T'HH:mm'Z'(floor)</formatString>
+                                                    
+                        </dateTime>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>eventID</attributeName>
+                                        
+                    <attributeDefinition>An identifier for the set of information associated with the event, which includes information about the place and time of the event</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>An identifier for the set of information associated with the event, which includes information about the place and time of the event</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>pointCountMinute</attributeName>
+                                        
+                    <attributeDefinition>The minute of sampling within the point count period</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>The minute of sampling within the point count period</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>targetTaxaPresent</attributeName>
+                                        
+                    <attributeDefinition>Indicator of whether the sample contained individuals of the target taxa</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Indicator of whether the sample contained individuals of the target taxa</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>taxonID</attributeName>
+                                        
+                    <attributeDefinition>Species code, based on one or more sources</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Species code, based on one or more sources</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>scientificName</attributeName>
+                                        
+                    <attributeDefinition>Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>taxonRank</attributeName>
+                                        
+                    <attributeDefinition>The lowest level taxonomic rank that can be determined for the individual or specimen</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>The lowest level taxonomic rank that can be determined for the individual or specimen</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>vernacularName</attributeName>
+                                        
+                    <attributeDefinition>A common or vernacular name</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>A common or vernacular name</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>observerDistance</attributeName>
+                                        
+                    <attributeDefinition>Radial distance between the observer and the individual(s) being observed</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>meter</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>detectionMethod</attributeName>
+                                        
+                    <attributeDefinition>How the individual(s) was (were) first detected by the observer</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>visual</code>
+                                                                                
+                                        <definition>V</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>flyover and singing</code>
+                                                                                
+                                        <definition>FS</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>singing</code>
+                                                                                
+                                        <definition>S</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>calling</code>
+                                                                                
+                                        <definition>C</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>visual and singing</code>
+                                                                                
+                                        <definition>VS</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>drumming and singing</code>
+                                                                                
+                                        <definition>DS</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>flyover</code>
+                                                                                
+                                        <definition>F</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>other aural and singing</code>
+                                                                                
+                                        <definition>OS</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>drumming</code>
+                                                                                
+                                        <definition>D</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>calling and singing</code>
+                                                                                
+                                        <definition>CS</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>other aural (e.g. wing beats)</code>
+                                                                                
+                                        <definition>O</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>unknown</code>
+                                                                                
+                                        <definition>U</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>visualConfirmation</attributeName>
+                                        
+                    <attributeDefinition>Whether the individual(s) was (were) seen after the initial detection</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>No</code>
+                                                                                
+                                        <definition>0</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Yes</code>
+                                                                                
+                                        <definition>1</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>sexOrAge</attributeName>
+                                        
+                    <attributeDefinition>Sex of individual if detectable, age of individual if individual can not be sexed</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Female</code>
+                                                                                
+                                        <definition>F</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Unknown</code>
+                                                                                
+                                        <definition>U</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Juvenile</code>
+                                                                                
+                                        <definition>J</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Male</code>
+                                                                                
+                                        <definition>M</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>clusterSize</attributeName>
+                                        
+                    <attributeDefinition>Number of individuals in a cluster (a group of individuals of the same species)</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>number</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>integer</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>clusterCode</attributeName>
+                                        
+                    <attributeDefinition>Alphabetic code (A-Z) linked to clusters (groups of individuals of the same species) spanning multiple records</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Alphabetic code (A-Z) linked to clusters (groups of individuals of the same species) spanning multiple records</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>identifiedBy</attributeName>
+                                        
+                    <attributeDefinition>An identifier for the technician who identified the specimen</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>An identifier for the technician who identified the specimen</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                            
+            </attributeList>
+                        
+            <caseSensitive>yes</caseSensitive>
+                        
+            <numberOfRecords>699</numberOfRecords>
+                    
+        </dataTable>
+        <dataTable>
+                        
+            <entityName>NEON.D01.BART.DP1.10003.001.brd_personnel.2022-06.basic.20231229T053256Z</entityName>
+                        
+            <attributeList/>
+                        
+            <caseSensitive>yes</caseSensitive>
+                        
+            <numberOfRecords>2</numberOfRecords>
+                    
+        </dataTable>
+        <dataTable>
+                        
+            <entityName>NEON.D01.BART.DP1.10003.001.brd_perpoint.2022-06.basic.20231229T053256Z</entityName>
+                        
+            <attributeList>
+                                
+                <attribute>
+                                        
+                    <attributeName>decimalLongitude</attributeName>
+                                        
+                    <attributeDefinition>The geographic longitude (in decimal degrees, WGS84) of the geographic center of the reference area</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>decimalDegree</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <precision>1.0E-6</precision>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>geodeticDatum</attributeName>
+                                        
+                    <attributeDefinition>Model used to measure horizontal position on the earth</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Model used to measure horizontal position on the earth</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>coordinateUncertainty</attributeName>
+                                        
+                    <attributeDefinition>The horizontal distance (in meters) from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location. Zero is not a valid value for this term</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>meter</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <precision>0.1</precision>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>elevation</attributeName>
+                                        
+                    <attributeDefinition>Elevation (in meters) above sea level</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>meter</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <precision>0.1</precision>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>elevationUncertainty</attributeName>
+                                        
+                    <attributeDefinition>Uncertainty in elevation values (in meters)</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>meter</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <precision>0.1</precision>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>startDate</attributeName>
+                                        
+                    <attributeDefinition>The start date-time or interval during which an event occurred</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <dateTime>
+                                                        
+                            <formatString>yyyy-MM-dd'T'HH:mm'Z'(floor)</formatString>
+                                                    
+                        </dateTime>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>eventID</attributeName>
+                                        
+                    <attributeDefinition>An identifier for the set of information associated with the event, which includes information about the place and time of the event</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>An identifier for the set of information associated with the event, which includes information about the place and time of the event</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>startCloudCoverPercentage</attributeName>
+                                        
+                    <attributeDefinition>Observer estimate of percent cloud cover at start of sampling</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>percent</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>integer</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>endCloudCoverPercentage</attributeName>
+                                        
+                    <attributeDefinition>Observer estimate of percent cloud cover at end of sampling</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>percent</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>integer</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>startRH</attributeName>
+                                        
+                    <attributeDefinition>Relative humidity as measured by handheld weather meter at the start of sampling</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>percent</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>integer</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>endRH</attributeName>
+                                        
+                    <attributeDefinition>Relative humidity as measured by handheld weather meter at the end of sampling</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>percent</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>integer</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>observedHabitat</attributeName>
+                                        
+                    <attributeDefinition>Observer assessment of dominant habitat at the sampling point at sampling time</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>barren</code>
+                                                                                
+                                        <definition>BA</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>agriculture/rural</code>
+                                                                                
+                                        <definition>AR</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>riparian</code>
+                                                                                
+                                        <definition>RI</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>mixed deciduous/evergreen forest</code>
+                                                                                
+                                        <definition>MX</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>deciduous forest</code>
+                                                                                
+                                        <definition>DF</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>wetland</code>
+                                                                                
+                                        <definition>WE</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>shrubland</code>
+                                                                                
+                                        <definition>SH</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>other</code>
+                                                                                
+                                        <definition>XX</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>grassland</code>
+                                                                                
+                                        <definition>GR</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>developed</code>
+                                                                                
+                                        <definition>DE</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>evergreen forest</code>
+                                                                                
+                                        <definition>EF</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>observedAirTemp</attributeName>
+                                        
+                    <attributeDefinition>The air temperature measured with a handheld weather meter</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>celsius</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>kmPerHourObservedWindSpeed</attributeName>
+                                        
+                    <attributeDefinition>The average wind speed measured with a handheld weather meter, in kilometers per hour</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>kilometersPerHour</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>laboratoryName</attributeName>
+                                        
+                    <attributeDefinition>Name of the laboratory or facility that is processing the sample</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Name of the laboratory or facility that is processing the sample</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>samplingProtocolVersion</attributeName>
+                                        
+                    <attributeDefinition>The NEON document number and version where detailed information regarding the sampling method used is available; format NEON.DOC.######vX</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>NEON.DOC.014041vK</code>
+                                                                                
+                                        <definition>NEON.DOC.014041vK</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>remarks</attributeName>
+                                        
+                    <attributeDefinition>Technician notes; free text comments accompanying the record</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Technician notes; free text comments accompanying the record</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>measuredBy</attributeName>
+                                        
+                    <attributeDefinition>An identifier for the technician who measured or collected the data</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>An identifier for the technician who measured or collected the data</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>samplingImpracticalRemarks</attributeName>
+                                        
+                    <attributeDefinition>Technician notes; free text comments accompanying the sampling impractical record</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Terrain Unsafe (could not safely approach to within 25 m of point)</code>
+                                                                                
+                                        <definition>U</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Other</code>
+                                                                                
+                                        <definition>O</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>No GPS reception, cannot find point</code>
+                                                                                
+                                        <definition>G</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Ran out of Time (five hours past sunrise or noticeably decreased bird activity)</code>
+                                                                                
+                                        <definition>T</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Weather (rain or wind)</code>
+                                                                                
+                                        <definition>W</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Private Property - Denied Permission</code>
+                                                                                
+                                        <definition>P</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Can't cross River</code>
+                                                                                
+                                        <definition>R</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Running water near point - unable to Hear</code>
+                                                                                
+                                        <definition>H</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Private Property - No contact with landowner</code>
+                                                                                
+                                        <definition>N</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>Snow pack impassible</code>
+                                                                                
+                                        <definition>S</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>samplingImpractical</attributeName>
+                                        
+                    <attributeDefinition>Samples and/or measurements were not collected due to the indicated circumstance</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>low yield groundwater</code>
+                                                                                
+                                        <definition>low yield groundwater</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>extreme weather</code>
+                                                                                
+                                        <definition>extreme weather</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>wildfire</code>
+                                                                                
+                                        <definition>wildfire</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>staff gauge disturbed</code>
+                                                                                
+                                        <definition>staff gauge disturbed</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>OK</code>
+                                                                                
+                                        <definition>OK</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>shallow groundwater</code>
+                                                                                
+                                        <definition>shallow groundwater</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>too windy</code>
+                                                                                
+                                        <definition>too windy</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>location snow covered</code>
+                                                                                
+                                        <definition>location snow covered</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>onshore protocols only</code>
+                                                                                
+                                        <definition>onshore protocols only</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>disturbance</code>
+                                                                                
+                                        <definition>disturbance</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>location wet</code>
+                                                                                
+                                        <definition>location wet</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>other</code>
+                                                                                
+                                        <definition>other</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>location burned</code>
+                                                                                
+                                        <definition>location burned</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>wildlife hazard</code>
+                                                                                
+                                        <definition>wildlife hazard</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>staff gauge not installed</code>
+                                                                                
+                                        <definition>staff gauge not installed</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>safety hazard</code>
+                                                                                
+                                        <definition>safety</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>night fishing</code>
+                                                                                
+                                        <definition>night fishing</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>location flooded</code>
+                                                                                
+                                        <definition>location flooded</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>obstruction</code>
+                                                                                
+                                        <definition>obstruction</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>location dry</code>
+                                                                                
+                                        <definition>location dry</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>high water velocity</code>
+                                                                                
+                                        <definition>high water velocity</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>horizon not present</code>
+                                                                                
+                                        <definition>horizon not present</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>temperature high</code>
+                                                                                
+                                        <definition>temperature high</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>outside target flow range</code>
+                                                                                
+                                        <definition>outside target flow range</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>logistical</code>
+                                                                                
+                                        <definition>logistical</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>temperature low</code>
+                                                                                
+                                        <definition>temperature low</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>not all samples collected on this date</code>
+                                                                                
+                                        <definition>not all samples collected on this date</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>location frozen</code>
+                                                                                
+                                        <definition>location frozen</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>ambient cell not clipped, livestock absent</code>
+                                                                                
+                                        <definition>ambient cell not clipped, livestock absent</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>coordinates not suitable</code>
+                                                                                
+                                        <definition>coordinates not suitable</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>management</code>
+                                                                                
+                                        <definition>management</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>exclosure cell not clipped, livestock absent</code>
+                                                                                
+                                        <definition>exclosure cell not clipped, livestock absent</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>uid</attributeName>
+                                        
+                    <attributeDefinition>Unique ID within NEON database; an identifier for the record</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Unique ID within NEON database; an identifier for the record</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>namedLocation</attributeName>
+                                        
+                    <attributeDefinition>Name of the measurement location in the NEON database</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Name of the measurement location in the NEON database</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>domainID</attributeName>
+                                        
+                    <attributeDefinition>Unique identifier of the NEON domain</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Unique identifier of the NEON domain</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>siteID</attributeName>
+                                        
+                    <attributeDefinition>NEON site code</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>NEON site code</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>plotID</attributeName>
+                                        
+                    <attributeDefinition>Plot identifier (NEON site code_XXX)</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>Plot identifier (NEON site code_XXX)</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>plotType</attributeName>
+                                        
+                    <attributeDefinition>NEON plot type in which sampling occurred: tower, distributed or gradient</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>NEON plot type in which sampling occurred: tower, distributed or gradient</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>pointID</attributeName>
+                                        
+                    <attributeDefinition>Identifier for a point location</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <enumeratedDomain>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>3</code>
+                                                                                
+                                        <definition>3</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>6</code>
+                                                                                
+                                        <definition>6</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>5</code>
+                                                                                
+                                        <definition>5</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>1</code>
+                                                                                
+                                        <definition>1</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>7</code>
+                                                                                
+                                        <definition>7</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>21</code>
+                                                                                
+                                        <definition>21</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>4</code>
+                                                                                
+                                        <definition>4</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>9</code>
+                                                                                
+                                        <definition>9</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>8</code>
+                                                                                
+                                        <definition>8</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                        
+                                    <codeDefinition>
+                                                                                
+                                        <code>2</code>
+                                                                                
+                                        <definition>2</definition>
+                                                                            
+                                    </codeDefinition>
+                                                                    
+                                </enumeratedDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>nlcdClass</attributeName>
+                                        
+                    <attributeDefinition>National Land Cover Database Vegetation Type Name</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <nominal>
+                                                        
+                            <nonNumericDomain>
+                                                                
+                                <textDomain>
+                                                                        
+                                    <definition>National Land Cover Database Vegetation Type Name</definition>
+                                                                    
+                                </textDomain>
+                                                            
+                            </nonNumericDomain>
+                                                    
+                        </nominal>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                                
+                <attribute>
+                                        
+                    <attributeName>decimalLatitude</attributeName>
+                                        
+                    <attributeDefinition>The geographic latitude (in decimal degrees, WGS84) of the geographic center of the reference area</attributeDefinition>
+                                        
+                    <measurementScale>
+                                                
+                        <ratio>
+                                                        
+                            <unit>
+                                                                
+                                <customUnit>decimalDegree</customUnit>
+                                                            
+                            </unit>
+                                                        
+                            <precision>1.0E-6</precision>
+                                                        
+                            <numericDomain>
+                                                                
+                                <numberType>real</numberType>
+                                                            
+                            </numericDomain>
+                                                    
+                        </ratio>
+                                            
+                    </measurementScale>
+                                    
+                </attribute>
+                            
+            </attributeList>
+                        
+            <caseSensitive>yes</caseSensitive>
+                        
+            <numberOfRecords>81</numberOfRecords>
+                    
+        </dataTable>
+        <dataTable>
+                        
+            <entityName>NEON.D01.BART.DP1.10003.001.brd_references.basic.20231229T053256Z</entityName>
+                        
+            <attributeList/>
+                        
+            <caseSensitive>yes</caseSensitive>
+                        
+            <numberOfRecords>8</numberOfRecords>
+                    
+        </dataTable>
+    </dataset>
+    <additionalMetadata>
+        <metadata>
+            
+            <unitList>
+                    
+                <unitType id="length" name="length">
+                            
+                    <dimension name="length"/>
+                        
+                </unitType>
+                    
+                <unitType id="time" name="time">
+                            
+                    <dimension name="time"/>
+                        
+                </unitType>
+                    
+                <unitType id="mass" name="mass">
+                            
+                    <dimension name="mass"/>
+                        
+                </unitType>
+                    
+                <unitType id="current" name="current">
+                            
+                    <dimension name="current"/>
+                        
+                </unitType>
+                    
+                <unitType id="temperature" name="temperature">
+                            
+                    <dimension name="temperature"/>
+                        
+                </unitType>
+                    
+                <unitType id="amount" name="amount">
+                            
+                    <dimension name="amount"/>
+                        
+                </unitType>
+                    
+                <unitType id="luminosity" name="luminosity">
+                            
+                    <dimension name="luminosity"/>
+                        
+                </unitType>
+                    
+                <unitType id="dimensionless" name="dimensionless">
+                            
+                    <dimension name="dimensionless"/>
+                        
+                </unitType>
+                    
+                <unitType id="angle" name="angle">
+                            
+                    <dimension name="angle"/>
+                        
+                </unitType>
+                    
+                <unitType id="acceleration" name="acceleration">
+                            
+                    <dimension name="length" power="1"/>
+                            
+                    <dimension name="time" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="charge" name="charge">
+                            
+                    <dimension name="current" power="1"/>
+                            
+                    <dimension name="time" power="1"/>
+                        
+                </unitType>
+                    
+                <unitType id="magneticFieldStrength" name="magneticFieldStrength">
+                            
+                    <dimension name="current" power="1"/>
+                            
+                    <dimension name="length" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="currentDensity" name="currentDensity">
+                            
+                    <dimension name="current" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="area" name="area">
+                            
+                    <dimension name="length" power="2"/>
+                        
+                </unitType>
+                    
+                <unitType id="lengthReciprocal" name="lengthReciprocal">
+                            
+                    <dimension name="length" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="frequency" name="frequency">
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="volume" name="volume">
+                            
+                    <dimension name="length" power="3"/>
+                        
+                </unitType>
+                    
+                <unitType id="volumetricArea" name="volumetricArea">
+                            
+                    <dimension name="length" power="3"/>
+                            
+                    <dimension name="length" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="speed" name="speed">
+                            
+                    <dimension name="length" power="1"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="massDensity" name="massDensity">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="-3"/>
+                        
+                </unitType>
+                    
+                <unitType id="massPerMass" name="massPerMass">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="mass" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="volumePerVolume" name="volumePerVolume">
+                            
+                    <dimension name="length" power="3"/>
+                            
+                    <dimension name="length" power="-3"/>
+                        
+                </unitType>
+                    
+                <unitType id="volumetricRate" name="volumetricRate">
+                            
+                    <dimension name="length" power="3"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="volumetricMassDensityRate" name="volumetricMassDensityRate">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="-3"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="arealMassDensityRate" name="arealMassDensityRate">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="specificVolume" name="specificVolume">
+                            
+                    <dimension name="mass" power="-1"/>
+                            
+                    <dimension name="length" power="3"/>
+                        
+                </unitType>
+                    
+                <unitType id="amountOfSubstanceConcentration" name="amountOfSubstanceConcentration">
+                            
+                    <dimension name="amount" power="1"/>
+                            
+                    <dimension name="length" power="-3"/>
+                        
+                </unitType>
+                    
+                <unitType id="amountOfSubstanceWeight" name="amountOfSubstanceWeight">
+                            
+                    <dimension name="amount" power="1"/>
+                            
+                    <dimension name="mass" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="luminance" name="luminance">
+                            
+                    <dimension name="luminosity" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="volumetricDensity" name="volumetricDensity">
+                            
+                    <dimension name="dimensionless" power="1"/>
+                            
+                    <dimension name="length" power="-3"/>
+                        
+                </unitType>
+                    
+                <unitType id="arealDensity" name="arealDensity">
+                            
+                    <dimension name="dimensionless" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="arealMassDensity" name="arealMassDensity">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="specificArea" name="specificArea">
+                            
+                    <dimension name="mass" power="-1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="force" name="force">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="1"/>
+                            
+                    <dimension name="time" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="energy" name="energy">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="power" name="power">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-3"/>
+                        
+                </unitType>
+                    
+                <unitType id="potentialDifference" name="potentialDifference">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-3"/>
+                            
+                    <dimension name="current" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="capacitance" name="capacitance">
+                            
+                    <dimension name="mass" power="-1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                            
+                    <dimension name="time" power="4"/>
+                            
+                    <dimension name="current" power="2"/>
+                        
+                </unitType>
+                    
+                <unitType id="resistance" name="resistance">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-3"/>
+                            
+                    <dimension name="current" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="resistivity" name="resistivity">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="3"/>
+                            
+                    <dimension name="time" power="-3"/>
+                            
+                    <dimension name="current" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="conductance" name="conductance">
+                            
+                    <dimension name="mass" power="-1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                            
+                    <dimension name="time" power="3"/>
+                            
+                    <dimension name="current" power="2"/>
+                        
+                </unitType>
+                    
+                <unitType id="magneticFlux" name="magneticFlux">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-2"/>
+                            
+                    <dimension name="current" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="magneticFluxDensity" name="magneticFluxDensity">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="time" power="-2"/>
+                            
+                    <dimension name="current" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="inductance" name="inductance">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-2"/>
+                            
+                    <dimension name="current" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="illuminance" name="illuminance">
+                            
+                    <dimension name="luminosity" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                        
+                </unitType>
+                    
+                <unitType id="radionucleotideActivity" name="radionucleotideActivity">
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="specificEnergy" name="specificEnergy">
+                            
+                    <dimension name="time" power="-2"/>
+                            
+                    <dimension name="length" power="2"/>
+                        
+                </unitType>
+                    
+                <unitType id="doseEquivalent" name="doseEquivalent">
+                            
+                    <dimension name="time" power="-2"/>
+                            
+                    <dimension name="length" power="2"/>
+                        
+                </unitType>
+                    
+                <unitType id="catalyticActivity" name="catalyticActivity">
+                            
+                    <dimension name="time" power="-1"/>
+                            
+                    <dimension name="amount" power="1"/>
+                        
+                </unitType>
+                    
+                <unitType id="pressure" name="pressure">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="time" power="-2"/>
+                            
+                    <dimension name="length" power="1"/>
+                        
+                </unitType>
+                    
+                <unitType id="transmissivity" name="transmissivity">
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="massSpecificLength" name="massSpecificLength">
+                            
+                    <dimension name="length" power="1"/>
+                            
+                    <dimension name="mass" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="massSpecificCount" name="massSpecificCount">
+                            
+                    <dimension name="dimensionless" power="1"/>
+                            
+                    <dimension name="mass" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="volumetricMass" name="volumetricMass">
+                            
+                    <dimension name="length" power="3"/>
+                            
+                    <dimension name="mass" power="1"/>
+                        
+                </unitType>
+                    
+                <unitType id="luminousFlux" name="luminousFlux">
+                            
+                    <dimension name="luminosity" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                        
+                </unitType>
+                    
+                <unitType id="variance" name="variance">
+                            
+                    <dimension name="amount" power="2"/>
+                        
+                </unitType>
+                    
+                <unitType id="arealAmountDensityRate" name="arealAmountDensityRate">
+                            
+                    <dimension name="amount" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="intensity" name="intensity">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="2"/>
+                            
+                    <dimension name="time" power="-3"/>
+                        
+                </unitType>
+                    
+                <unitType id="amountPerAmount" name="amountPerAmount">
+                            
+                    <dimension name="amount" power="1"/>
+                            
+                    <dimension name="amount" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="conductivity" name="conductivity">
+                            
+                    <dimension name="current" power="2"/>
+                            
+                    <dimension name="mass" power="-1"/>
+                            
+                    <dimension name="length" power="-3"/>
+                            
+                    <dimension name="time" power="-3"/>
+                        
+                </unitType>
+                    
+                <unitType id="amountOfSubstanceChargeWeight" name="amountOfSubstanceChargeWeight">
+                            
+                    <dimension name="amount" power="1"/>
+                            
+                    <dimension name="current" power="1"/>
+                            
+                    <dimension name="time" power="1"/>
+                            
+                    <dimension name="mass" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="massRate" name="massRate">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="massFlux" name="massFlux">
+                            
+                    <dimension name="mass" power="1"/>
+                            
+                    <dimension name="length" power="-2"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unitType id="amountOfSubstanceWeightRate" name="amountOfSubstanceWeightRate">
+                            
+                    <dimension name="amount" power="1"/>
+                            
+                    <dimension name="mass" power="-1"/>
+                            
+                    <dimension name="time" power="-1"/>
+                        
+                </unitType>
+                    
+                <unit abbreviation="number" id="number" name="number" unitType="amount"/>
+                    
+                <unit abbreviation="°C" constantToSI="273.15" id="celsius" multiplierToSI="1" name="celsius" parentSI="kelvin" unitType="temperature"/>
+                    
+                <unit abbreviation="m" id="meter" multiplierToSI="1" name="meter" parentSI="meter" unitType="length"/>
+                    
+                <unit abbreviation="DD" id="decimalDegree" multiplierToSI="0.0174533" name="decimalDegree" parentSI="radian" unitType="angle"/>
+                    
+                <unit abbreviation="km/h" id="kilometersPerHour" multiplierToSI="0.2778" name="kilometersPerHour" parentSI="metersPerSecond" unitType="speed"/>
+                    
+                <unit abbreviation="%" id="percent" name="percent" unitType="amountPerAmount"/>
+                
+            </unitList>
+        </metadata>
+    </additionalMetadata>
+</eml:eml>
