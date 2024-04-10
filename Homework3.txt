@@ -1,0 +1,46 @@
+# Question 1 
+Answer: ```Find \s+\s replace \,```
+Explanation: Looking for multiple spaces, adding ```\s```.
+First S_Second{4}, 3.4
+Second,More Text,1.555555,2.2220
+Third,x,3,124
+
+
+Question 2
+
+Bryan Ballif (University of Vermont)
+Aaron Ellison (Harvard Forest)
+Sydne Record (Bryn Mawr)
+
+Question 3
+
+0001 Georgia Horseshoe.mp3
+0002 Billy In The Lowground.mp3
+0003 Winder Slide.mp3
+0004 Walking Cane.mp3
+
+Question 4
+
+Georgia Horseshoe_0001.mp3
+Billy In The Lowground_0002.mp3
+Winder Slide_0003.mp3
+Walking Cane_0004.mp3
+
+Question 5
+
+C_pennsylvanicus, 44
+C_herculeanus, 3
+M_punctiventris, 4
+L_neoniger, 55
+
+Question 6
+C_penn, 44
+C_herc, 3
+M_punc, 4
+L_neon, 55
+
+Question 7
+Campenn, 44, 10.2
+Camherc, 3, 10.5
+Myrpunc, 4, 12.2
+Lasneon, 55, 3.3
