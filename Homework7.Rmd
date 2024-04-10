@@ -3,6 +3,8 @@ title: "Homework 7"
 author: "Rachel Hall"
 date: "Feb 28, 2024"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +14,7 @@ library(ggplot2)
 library(MASS) 
 ```
 
-### 1. Reading example dataset and decide on pattern.
+#### 1. Reading example dataset and decide on pattern.
 
 ```{r results='hide'}
 z<-read.csv("Li_Soil_Dataset.csv", sep=",", comment.char = '#')
@@ -28,7 +30,7 @@ p1 <- ggplot(data=z, aes(x=myVar, y=after_stat(density))) +
 print(p1)
 ```
 
-### 2. Specifying the sample size, means, and variances from data groups.
+#### 2. Specifying the sample size, means, and variances from data groups.
 
 -   
 
@@ -57,7 +59,7 @@ mean(d_biomass, trim = 0, na.rm = FALSE)
 
 <!-- # Drought Mean = 62 -->
 
-### 3. Write code to create a random data set that has these attributes. Organize these data into a data frame with the appropriate structure.
+#### 3. Write code to create a random data set that has these attributes. Organize these data into a data frame with the appropriate structure.
 
 ```{r results='hide'}
 library(truncnorm)
@@ -76,7 +78,7 @@ ANOdata <- data.frame(ID, TGroup, resVar)
 str(ANOdata)
 ```
 
-### 4. Now write code to analyze the data then write code to generate a useful graph of the data.
+#### 4. Now write code to analyze the data then write code to generate a useful graph of the data.
 
 -   
 
@@ -102,18 +104,18 @@ ANOPlot <- ggplot(data=ANOdata,aes(x=TGroup,y=resVar,fill=TGroup)) +
 print(ANOPlot)
 ```
 
-### 5. Try running your analysis multiple times to get a feeling for how variable the results are with the same parameters, but different sets of random numbers.
+#### 5. Try running your analysis multiple times to get a feeling for how variable the results are with the same parameters, but different sets of random numbers.
 
-* #### First run: F value = 2.18012, p-value = 0.1452127
+* ##### First run: F value = 2.18012, p-value = 0.1452127
 
-* #### Second run: F value = 1.327416, p-value = 0.2539924
+* ##### Second run: F value = 1.327416, p-value = 0.2539924
 
-* #### Third run: F value = 1.848383, p-value = 0.1792339
+* ##### Third run: F value = 1.848383, p-value = 0.1792339
 
-#### All of these runs produced p-values greater than the alpha level of 0.05, which means we would fail to reject the null hypothesis for this data. This would mean that it can be concluded there isn't sufficient evidence to say there is a statistically significant difference between the means of the two groups.
+##### All of these runs produced p-values greater than the alpha level of 0.05, which means we would fail to reject the null hypothesis for this data. This would mean that it can be concluded there isn't sufficient evidence to say there is a statistically significant difference between the means of the two groups.
 
 
-### 6. Now begin adjusting the means of the different groups.
+#### 6. Now begin adjusting the means of the different groups.
 
 #### Adjusting the mean for ambient to 79 rather than 74 (+5).
 

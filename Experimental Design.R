@@ -107,3 +107,44 @@ lRegModel <- glm(yVar ~ xVar,
                  family=binomial(link=logit))
 summary(lRegModel)
 summary(lRegModel)$coefficients
+
+# Basic ggplot of logistic regression
+lRegPlot <- ggplot(data=lRegData, aes(x=xVar,y=yVar)) +
+  geom_point() +
+  stat_smooth(method=glm, method.args=list(family=binomial))
+print(lRegPlot)
+
+
+# Data for contingency table analysis
+# integer counts of different data groups
+vec1 <- c(50,66,22)
+vec2 <- c(120,22,30)
+dataMatrix <- rbind(vec1,vec2)
+rownames(dataMatrix) <- c("Cold","Warm")
+colnames(dataMatrix) <-c("Aphaenogaster",
+                         "Camponotus",
+                         "Crematogaster")
+str(dataMatrix)
+
+
+# Basic contingency table analysis in R
+print(chisq.test(dataMatrix))
+
+# Plotting contingency table analyses
+
+# some simple plots using baseR
+mosaicplot(x=dataMatrix,
+           col=c("goldenrod","grey","black"),
+           shade=FALSE)
+barplot(height=dataMatrix,
+        beside=TRUE,
+        col=c("cornflowerblue","tomato"))
+
+
+dFrame <- as.data.frame(dataMatrix)
+dFrame <- cbind(dFrame,list(Treatment=c("Cold","Warm")))
+dFrame <- gather(dFrame,key=Species,Aphaenogaster:Crematogaster,value=Counts) 
+
+p <- ggplot(data=dFrame,aes(x=Species,y=Counts,fill=Treatment)) + geom_bar(stat="identity",position="dodge",color=I("black")) +
+  scale_fill_manual(values=c("cornflowerblue","coral"))
+print(p)
