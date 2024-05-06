@@ -1,0 +1,104 @@
+---
+title: "Batch Practice"
+author: "Rachel Hall"
+date: "2024-04-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a program to batch process multiple data sets. The data set came in one .csv file, so I separated it into 7 different files by year. Next, I batch processed the 7 files, performed a linear regression analysis, and recorded summary statistics for each year (p-value, slope, r^2) in a table.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+```
+
+# Initialization:
+```{r}
+library(dplyr)
+library(sqldf)
+library(tidyverse)
+```
+
+```{r}
+paste("#" ,format(Sys.Date(),format="%d %b %Y"))
+
+##################################################
+# FUNCTION: ex_stats
+# packages: none
+# purpose: fits linear model, extracts statistics
+# input: 2 col data frame (x and y)
+# output: slope, p-value, and r^2
+# ------------------------------------------------
+ex_stats <- function(d=NULL) {
+  if (is.null(d)) {
+    x_var<-runif(10)
+    y_var<-runif(10)
+    d<-data.frame(x_var, y_var)
+    }
+  .<-lm(data=d, d[,2]~d[,13]) # column number of interest
+  .<-summary(.)
+  # already know where in summary statistics list to find values of interest
+  stats_list<-list(slope=.$coefficients[2,1],
+                   p_val=.$coefficients[2,4],
+                   r2<-.$r.squared)
+  return(stats_list)
+}
+##################################################
+```
+
+# Sourcing:
+```{r}
+source("Ex_Stats.R")
+
+```
+
+# File Preparation:
+```{r}
+# Data set from panel study of income dynamics
+x<-read.csv("batch_data_example.csv")
+x<-arrange(x, year, by=year)
+
+# Separating csv with data into 7 files, by year
+for (i in 1976:1982) {
+  y<-x%>%
+    filter(year==i)
+output<-paste0(i)
+# setwd() if I didn't manually setwd
+write.csv(y, 
+          file=output, 
+          sep=",", 
+          col.names=TRUE, 
+          row.names=FALSE)
+}
+```
+
+# Batch Processing:
+```{r}
+# Create data frame to hold file summary statistics
+ID <- 1:7 # consecutive unique integer for every file
+year <- c("1976", "1977", "1978", "1979", "1980", "1981", "1982")
+slope <- rep(NA,length(year)) # put in NAs for slope,
+p_val <- rep(NA,length(year)) # p-value,
+r2 <- rep(NA,length(year)) # and r^2
+# data frame with stats for each file (all NAs rn)
+stats_out <- data.frame(ID,year,slope,p_val,r2)
+# print(stats_out)
+  
+# Batch process by looping through individual files
+# linear regression of years experience vs. wages earned
+for (i in seq_along(year)) {
+  data<-read.table(file=paste(year[i],sep=""),
+                     sep=",",
+                     header=TRUE) # read in next data file
+  d_clean <- data[complete.cases(data),] # get clean cases
+  . <- reg_stats(d_clean) # pull regression stats from clean file
+  stats_out[i,3:5] <- unlist(.) # unlist, copy into last 3 columns
+  # everything unlists, okay bc they're the same data type (numeric)
+}
+print(stats_out)
+```
