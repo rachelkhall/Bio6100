@@ -15,28 +15,28 @@ HTML Webpage for Computational Biology, Spring 2024.
 [Link to New Page](newpage.html)
 
 ### Homework 3
-[Link to HW3](HW3.html)
+[Link to HW3](Homeworks/HW3.html)
 
 ### Homework 4
-[Link to HW4](HW4.html)
+[Link to HW4](Homeworks/HW4.html)
 
 ### Homework 5
-[Link to HW5](Homework5.html)
+[Link to HW5](Homeworks/Homework5.html)
 
 ### Homework 6
-[Link to HW6](Homework6.html)
+[Link to HW6](Homeworks/Homework6.html)
 
 ### Homework 7
-[Link to HW7](Homework7.html)
+[Link to HW7](Homeworks/Homework7.html)
 
 ### Homework 8
-[Link to HW8](Homework8.html)
+[Link to HW8](Homeworks/Homework8.html)
 
 ### Homework 9
-[Link to HW9](Homework9.html)
+[Link to HW9](Homeworks/Homework9.html)
 
 ### Homework 10
-[Link to HW10](Homework10.html)
+[Link to HW10](Homeworks/Homework10.html)
 
 ### Homework 11
-[Link to HW11](Homework11.html)
+[Link to HW11](Homeworks/Homework11.html)

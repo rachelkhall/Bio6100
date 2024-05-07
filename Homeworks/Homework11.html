@@ -483,10 +483,8 @@ for abundance, one for species richness, and one for year.</h4>
                      Abundance = numeric(),
                      Richness = numeric())</code></pre>
 </div>
-</div>
-</div>
-<div id="loop-through-each-csv-file" class="section level1">
-<h1>Loop through each CSV file:</h1>
+<div id="loop-through-each-csv-file" class="section level5">
+<h5>Loop through each CSV file:</h5>
 <pre class="r"><code>for (i in 1:9) {
   setwd(paste0(working_directory,&quot;/&quot;, filelist[i]))
   data &lt;- read.csv(filenames[i])
@@ -517,6 +515,8 @@ print(results)</code></pre>
 ## 7 2020        89       18
 ## 8 2021      1015       50
 ## 9 2022       699       39</code></pre>
+</div>
+</div>
 <div id="question-5-using-a-for-loop-run-your-created-functions-as-a-batch-process-for-each-folder-changing-the-working-directory-as-necessary-to-read-in-the-correct-files-calculating-summary-statistics-with-your-created-functions-and-then-writing-them-out-into-your-summary-statistics-data-frame." class="section level4">
 <h4>Question 5: Using a for loop, run your created functions as a batch
 process for each folder, changing the working directory as necessary to
