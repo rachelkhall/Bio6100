@@ -1,46 +1,66 @@
 ---
-title: "Index"
+title: "Computational Biology"
 author: "Rachel Hall"
 date: "Spring 2024"
-output: html_document
+output: 
+  html_document: 
+    highlight: haddock
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(data.table)
+library(prettydoc)
+library(rmdformats)
 ```
 
-HTML Webpage for Computational Biology, Spring 2024. 
 
-### Homework 2
-[Link to New Page](newpage.html)
+#  Assignments
+
+### Homework 2 
+[Link](newpage.html)  to new page assignment. 
 
 ### Homework 3
-[Link to HW3](Homeworks/HW3.html)
+[Link](Homeworks/HW3.html) to Homework 3 assignment.
+
 
 ### Homework 4
-[Link to HW4](Homeworks/HW4.html)
+[Link](Homeworks/HW4.html) to Homework 4 assignment.
+
 
 ### Homework 5
-[Link to HW5](Homeworks/Homework5.html)
+[Link](Homeworks/Homework5.html) to Homework 5 assignment.
+
 
 ### Homework 6
-[Link to HW6](Homeworks/Homework6.html)
+ 
+[Link](Homeworks/Homework6.html) to Homework 6 assignment.
+
 
 ### Homework 7
-[Link to HW7](Homeworks/Homework7.html)
+[Link](Homeworks/Homework7.html) to Homework 7 assignment.
+
 
 ### Homework 8
-[Link to HW8](Homeworks/Homework8.html)
+[Link](Homeworks/Homework8.html) to Homework 8 assignment.
+
 
 ### Homework 9
-[Link to HW9](Homeworks/Homework9.html)
+[Link](Homeworks/Homework9.html) to Homework 9 assignment.
+
 
 ### Homework 10
-[Link to HW10](Homeworks/Homework10.html)
+ 
+[Link](Homeworks/Homework10.html) to Homework 10 assignment.
+
 
 ### Homework 11
-[Link to HW11](Homeworks/Homework11.html)
+[Link](StrategicCodingPractices/Homework11.html) to Homework 11 assignment.
 
 
- 
+### Homework 12
+[Link](Homeworks/Homework12.html)  to Homework 12 assignment.
+
+
   

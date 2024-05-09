@@ -1,0 +1,60 @@
+---
+title: "Homework 12"
+author: "Rachel Hall"
+date: "April 17, 2024" 
+output: 
+  html_document: 
+    highlight: pygments
+    theme: cerulean
+---
+
+### Load preliminaries
+```{r comment=NULL,message=FALSE,warning=FALSE}
+library(tidyverse)
+library(ggridges)
+library(scales)
+library(plotly)
+library(ggplot2)
+```
+
+### Upload Dataset: Warpbreaks
+#### *The Number of Breaks in Yarn during Weaving*
+```{r} 
+data(warpbreaks)
+```
+```{r echo=FALSE,comment=NULL}
+require(stats); require(graphics)
+
+names(warpbreaks)[1]<-paste("Breaks")
+names(warpbreaks)[2]<-paste("Wool")
+names(warpbreaks)[3]<-paste("Tension")
+summary(warpbreaks)
+```
+
+### Plot Basic Boxplot of Data
+```{r}
+ggplot(data=warpbreaks) +
+         aes(x=Tension, y=Breaks)+
+         geom_boxplot()
+```
+
+
+### Plot Wool A & B:
+#### *Adjusting the plots to separate the two types of wool and compare side by side.* 
+```{r}
+opar <- par(mfrow = c(1, 2), oma = c(0, 0, 1.1, 0))
+plot(Breaks ~ Tension, data = warpbreaks, col = "lightsteelblue1",
+     varwidth = TRUE, subset = Wool == "A", main = "Wool A")
+plot(Breaks ~ Tension, data = warpbreaks, col = "cornflowerblue",
+     varwidth = TRUE, subset = Wool == "B", main = "Wool B")
+mtext("Warpbreaks Data", side = 3, outer = TRUE)
+```
+```{r echo=FALSE}
+par(opar)
+```
+
+### Summary Statistics
+```{r comment=NULL}
+summary(fm1 <- lm(Breaks ~ Wool*Tension, data = warpbreaks))
+anova(fm1)
+```

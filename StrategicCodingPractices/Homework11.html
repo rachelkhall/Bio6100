@@ -11,8 +11,9 @@
 
 <meta name="author" content="Rachel Hall" />
 
+<meta name="date" content="2024-04-11" />
 
-<title>Computational Biology</title>
+<title>Homework 11</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -220,6 +221,107 @@ ul.task-list{list-style: none;}
 
 
 
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 
@@ -320,66 +422,191 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Computational Biology</h1>
+<h1 class="title toc-ignore">Homework 11</h1>
 <h4 class="author">Rachel Hall</h4>
-<h4 class="date">Spring 2024</h4>
+<h4 class="date">April 11, 2024</h4>
 
 </div>
 
 
-<div id="assignments" class="section level1">
-<h1>Assignments</h1>
-<div id="homework-2" class="section level3">
-<h3>Homework 2</h3>
-<p><a href="newpage.html">Link</a> to new page assignment.</p>
+<div id="batch-processing" class="section level3">
+<h3>Batch Processing</h3>
+<p><!-- Downloading Prelims --></p>
+<div id="directory-for-setwd" class="section level5">
+<h5>Directory for setwd:</h5>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;/Users/rachelhall/BME 6100/Bio6100/StrategicCodingPractices/OriginalData&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>working_directory<span class="ot">&lt;-</span><span class="st">&quot;/Users/rachelhall/BME 6100/Bio6100/StrategicCodingPractices/OriginalData&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>filelist<span class="ot">&lt;-</span><span class="fu">list.files</span>((working_directory))</span></code></pre></div>
+<pre><code>[1] &quot;NEON.D01.BART.DP1.10003.001.2015-06.basic.20240127T000425Z.RELEASE-2024&quot;
+[2] &quot;NEON.D01.BART.DP1.10003.001.2016-06.basic.20240127T000425Z.RELEASE-2024&quot;
+[3] &quot;NEON.D01.BART.DP1.10003.001.2017-06.basic.20240127T000425Z.RELEASE-2024&quot;
+[4] &quot;NEON.D01.BART.DP1.10003.001.2018-06.basic.20240127T000425Z.RELEASE-2024&quot;
+[5] &quot;NEON.D01.BART.DP1.10003.001.2019-06.basic.20240127T000425Z.RELEASE-2024&quot;
+[6] &quot;NEON.D01.BART.DP1.10003.001.2020-06.basic.20240127T000425Z.RELEASE-2024&quot;
+[7] &quot;NEON.D01.BART.DP1.10003.001.2020-07.basic.20240127T000425Z.RELEASE-2024&quot;
+[8] &quot;NEON.D01.BART.DP1.10003.001.2021-06.basic.20240127T000425Z.RELEASE-2024&quot;
+[9] &quot;NEON.D01.BART.DP1.10003.001.2022-06.basic.20240127T000425Z.RELEASE-2024&quot;</code></pre>
+<!-- # paste0("Here is"," the"," filepath: ", filelist[1]) -->
 </div>
-<div id="homework-3" class="section level3">
-<h3>Homework 3</h3>
-<p><a href="Homeworks/HW3.html">Link</a> to Homework 3 assignment.</p>
+<div id="question-2-within-each-years-folder-you-will-only-be-using-a-file-from-each-year-labeled-countdata-in-its-title.-using-for-loops-iterate-through-each-years-folders-to-gather-the-file-names-of-these-countdata-.csv-files." class="section level4">
+<h4>Question 2: Within each year’s folder, you will only be using a file
+from each year labeled “countdata” in its title. Using for loops,
+iterate through each year’s folders to gather the file names of these
+“countdata” .csv files.</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>filenames<span class="ot">&lt;-</span><span class="fu">c</span>() <span class="co">#1-9 because 9 folders </span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) {</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="fu">setwd</span>(<span class="fu">paste0</span>(working_directory, <span class="st">&quot;/&quot;</span>, filelist[i]))</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  filenames[i]<span class="ot">&lt;-</span><span class="fu">list.files</span>(<span class="at">pattern=</span><span class="st">&quot;countdata&quot;</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>filenames}</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="fu">print</span>(filenames)</span></code></pre></div>
+<pre><code>[1] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2015-06.basic.20231226T232626Z.csv&quot;
+[2] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2016-06.basic.20231227T013428Z.csv&quot;
+[3] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2017-06.basic.20231227T094709Z.csv&quot;
+[4] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2018-06.basic.20231228T172744Z.csv&quot;
+[5] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2019-06.basic.20231227T184129Z.csv&quot;
+[6] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2020-06.basic.20231227T224944Z.csv&quot;
+[7] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2020-07.basic.20231227T225020Z.csv&quot;
+[8] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2021-06.basic.20231228T010546Z.csv&quot;
+[9] &quot;NEON.D01.BART.DP1.10003.001.brd_countdata.2022-06.basic.20231229T053256Z.csv&quot;</code></pre>
 </div>
-<div id="homework-4" class="section level3">
-<h3>Homework 4</h3>
-<p><a href="Homeworks/HW4.html">Link</a> to Homework 4 assignment.</p>
+<div id="question-3-starting-with-pseudo-code-generate-functions-for-1-cleaning-the-data-for-any-emptymissing-cases-2-extract-the-year-from-each-file-name-3-calculate-abundance-for-each-year-total-number-of-individuals-found-4-calculate-species-richness-for-each-year-number-of-unique-species-found." class="section level4">
+<h4>Question 3: Starting with pseudo-code, generate functions for 1)
+Cleaning the data for any empty/missing cases, 2) Extract the year from
+each file name, 3) Calculate Abundance for each year (Total number of
+individuals found), 4) Calculate Species Richness for each year (Number
+of unique species found).</h4>
+<div id="extracted-the-year-in-separate-loop" class="section level5">
+<h5>Extracted the year in separate loop</h5>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>fileyear<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) {</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">setwd</span>(<span class="fu">paste0</span>(working_directory,<span class="st">&quot;/&quot;</span>, filelist[i]))</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  fileyear[i]<span class="ot">&lt;-</span><span class="fu">list.files</span>(<span class="at">pattern=</span><span class="st">&quot;.20</span><span class="sc">\\</span><span class="st">d{2}</span><span class="sc">\\</span><span class="st">W&quot;</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  fileyear[i]<span class="ot">&lt;-</span> <span class="fu">str_extract</span>(fileyear[i], <span class="at">pattern=</span><span class="st">&quot;20</span><span class="sc">\\</span><span class="st">d{2}&quot;</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>}</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="fu">print</span>(fileyear)</span></code></pre></div>
+<pre><code>[1] &quot;2015&quot; &quot;2016&quot; &quot;2017&quot; &quot;2018&quot; &quot;2019&quot; &quot;2020&quot; &quot;2020&quot; &quot;2021&quot; &quot;2022&quot;</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) {</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">setwd</span>(<span class="fu">paste0</span>(working_directory,<span class="st">&quot;/&quot;</span>, filelist[i]))</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="co"># Cleaning up the blank lines</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(filenames[i])</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  data <span class="ot">&lt;-</span> data[<span class="fu">complete.cases</span>(data<span class="sc">$</span>scientificName),]</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="co"># Printing results</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;File:&quot;</span>, <span class="fu">basename</span>(filenames[i]), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Date:&quot;</span>, fileyear[i], <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>) </span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Abundance:&quot;</span>, <span class="fu">nrow</span>(data), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="co"># number of rows is the abundance</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Richness:&quot;</span>, <span class="fu">length</span>(<span class="fu">unique</span>(data<span class="sc">$</span>scientificName)), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="co"># Number of unique species in scientificName column</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>File: NEON.D01.BART.DP1.10003.001.brd_countdata.2015-06.basic.20231226T232626Z.csv 
+Date: 2015 
+Abundance: 454 
+Richness: 40 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2016-06.basic.20231227T013428Z.csv 
+Date: 2016 
+Abundance: 883 
+Richness: 39 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2017-06.basic.20231227T094709Z.csv 
+Date: 2017 
+Abundance: 685 
+Richness: 35 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2018-06.basic.20231228T172744Z.csv 
+Date: 2018 
+Abundance: 772 
+Richness: 37 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2019-06.basic.20231227T184129Z.csv 
+Date: 2019 
+Abundance: 628 
+Richness: 44 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2020-06.basic.20231227T224944Z.csv 
+Date: 2020 
+Abundance: 626 
+Richness: 46 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2020-07.basic.20231227T225020Z.csv 
+Date: 2020 
+Abundance: 89 
+Richness: 18 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2021-06.basic.20231228T010546Z.csv 
+Date: 2021 
+Abundance: 1015 
+Richness: 50 
+
+File: NEON.D01.BART.DP1.10003.001.brd_countdata.2022-06.basic.20231229T053256Z.csv 
+Date: 2022 
+Abundance: 699 
+Richness: 39 </code></pre>
 </div>
-<div id="homework-5" class="section level3">
-<h3>Homework 5</h3>
-<p><a href="Homeworks/Homework5.html">Link</a> to Homework 5
-assignment.</p>
 </div>
-<div id="homework-6" class="section level3">
-<h3>Homework 6</h3>
-<p><a href="Homeworks/Homework6.html">Link</a> to Homework 6
-assignment.</p>
+<div id="question-4-create-an-initial-empty-data-frame-to-hold-the-above-summary-statistics-you-should-have-4-columns-one-for-the-file-name-one-for-abundance-one-for-species-richness-and-one-for-year." class="section level4">
+<h4>Question 4: Create an initial empty data frame to hold the above
+summary statistics-you should have 4 columns, one for the file name, one
+for abundance, one for species richness, and one for year.</h4>
+<div id="empty-data-frame" class="section level5">
+<h5>Empty data frame:</h5>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>results<span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">File =</span> <span class="fu">character</span>(),</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>                     <span class="at">Date=</span><span class="fu">character</span>(),</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>                     <span class="at">Abundance =</span> <span class="fu">numeric</span>(),</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>                     <span class="at">Richness =</span> <span class="fu">numeric</span>())</span></code></pre></div>
 </div>
-<div id="homework-7" class="section level3">
-<h3>Homework 7</h3>
-<p><a href="Homeworks/Homework7.html">Link</a> to Homework 7
-assignment.</p>
+<div id="loop-through-each-csv-file" class="section level5">
+<h5>Loop through each CSV file:</h5>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) {</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>  <span class="fu">setwd</span>(<span class="fu">paste0</span>(working_directory,<span class="st">&quot;/&quot;</span>, filelist[i]))</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(filenames[i])</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>  data <span class="ot">&lt;-</span> data[<span class="fu">complete.cases</span>(data<span class="sc">$</span>scientificName),]</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>  abundance <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data)</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>  richness <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(data<span class="sc">$</span>scientificName))</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>  <span class="co"># Filling data frame while looping through filenames  </span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="fu">rbind</span>(results, <span class="fu">data.frame</span>(<span class="at">File =</span> filenames[i], <span class="at">Date =</span> fileyear[i], <span class="at">Abundance =</span> abundance, <span class="at">Richness =</span> richness))</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>}</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="fu">print</span>(results)</span></code></pre></div>
+<pre><code>                                                                          File
+1 NEON.D01.BART.DP1.10003.001.brd_countdata.2015-06.basic.20231226T232626Z.csv
+2 NEON.D01.BART.DP1.10003.001.brd_countdata.2016-06.basic.20231227T013428Z.csv
+3 NEON.D01.BART.DP1.10003.001.brd_countdata.2017-06.basic.20231227T094709Z.csv
+4 NEON.D01.BART.DP1.10003.001.brd_countdata.2018-06.basic.20231228T172744Z.csv
+5 NEON.D01.BART.DP1.10003.001.brd_countdata.2019-06.basic.20231227T184129Z.csv
+6 NEON.D01.BART.DP1.10003.001.brd_countdata.2020-06.basic.20231227T224944Z.csv
+7 NEON.D01.BART.DP1.10003.001.brd_countdata.2020-07.basic.20231227T225020Z.csv
+8 NEON.D01.BART.DP1.10003.001.brd_countdata.2021-06.basic.20231228T010546Z.csv
+9 NEON.D01.BART.DP1.10003.001.brd_countdata.2022-06.basic.20231229T053256Z.csv
+  Date Abundance Richness
+1 2015       454       40
+2 2016       883       39
+3 2017       685       35
+4 2018       772       37
+5 2019       628       44
+6 2020       626       46
+7 2020        89       18
+8 2021      1015       50
+9 2022       699       39</code></pre>
 </div>
-<div id="homework-8" class="section level3">
-<h3>Homework 8</h3>
-<p><a href="Homeworks/Homework8.html">Link</a> to Homework 8
-assignment.</p>
 </div>
-<div id="homework-9" class="section level3">
-<h3>Homework 9</h3>
-<p><a href="Homeworks/Homework9.html">Link</a> to Homework 9
-assignment.</p>
+<div id="question-5-using-a-for-loop-run-your-created-functions-as-a-batch-process-for-each-folder-changing-the-working-directory-as-necessary-to-read-in-the-correct-files-calculating-summary-statistics-with-your-created-functions-and-then-writing-them-out-into-your-summary-statistics-data-frame." class="section level4">
+<h4>Question 5: Using a for loop, run your created functions as a batch
+process for each folder, changing the working directory as necessary to
+read in the correct files, calculating summary statistics with your
+created functions, and then writing them out into your summary
+statistics data frame.</h4>
+<div id="im-not-sure-what-the-difference-between-the-table-from-q4-and-this-would-be.-summary-of-the-files-shown-below" class="section level5">
+<h5>I’m not sure what the difference between the table from Q4 and this
+would be. Summary of the files shown below:</h5>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">summary</span>(results[<span class="fu">c</span>(<span class="st">&#39;Abundance&#39;</span>,<span class="st">&#39;Richness&#39;</span>)])</span></code></pre></div>
+<pre><code>   Abundance         Richness    
+ Min.   :  89.0   Min.   :18.00  
+ 1st Qu.: 626.0   1st Qu.:37.00  
+ Median : 685.0   Median :39.00  
+ Mean   : 650.1   Mean   :38.67  
+ 3rd Qu.: 772.0   3rd Qu.:44.00  
+ Max.   :1015.0   Max.   :50.00  </code></pre>
 </div>
-<div id="homework-10" class="section level3">
-<h3>Homework 10</h3>
-<p><a href="Homeworks/Homework10.html">Link</a> to Homework 10
-assignment.</p>
-</div>
-<div id="homework-11" class="section level3">
-<h3>Homework 11</h3>
-<p><a href="StrategicCodingPractices/Homework11.html">Link</a> to
-Homework 11 assignment.</p>
-</div>
-<div id="homework-12" class="section level3">
-<h3>Homework 12</h3>
-<p><a href="Homeworks/Homework12.html">Link</a> to Homework 12
-assignment.</p>
 </div>
 </div>
 
